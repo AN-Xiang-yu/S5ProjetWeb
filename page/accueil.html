@@ -5,54 +5,96 @@
     <meta charset="utf-8">
     <title>ZENefrei</title>
     <link rel="stylesheet" href="../css/commun.css">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/commun.js"></script>
+    <script>
+        changerNav()
+    </script>
 </head>
 
 <body>
-    <header>
-        <ul class="flex align_center justify_content_center">
-            <li class="flex_15">
-                <div class="flex justify_content_center">
-                    <a href="accueil.html">
-                        <!-- logo sur ordinateur -->
-                        <img class="hight100" src="../img/logo-phone.png" alt="logo d'ordinateur">
-                        <!-- logo sur tablette/phone -->
-                        <!-- <img src="../img/logo.png" alt=""> -->
-                    </a>
-                </div>
-            </li>
-            <li class="flex_10">
-                <a href="accueil.html">Accueil</a></li>
-            <li class="flex_10">
-                <a href="contact.html">Contact</a></li>
-            <li class="flex_10">Activité</li>
-            <li class="flex_10">Collabs</li>
-            <li class="flex_10">La méditation</li>
-            <li class="flex_10">
-                <a href="a_propos.html">À propos</a></li>
-            <li class="flex_10">
-                <a href="nous_rejoindre.html">Nous rejoindre</a></li>
-        </ul>
+    <header class="w100 backgroud_orange_saumon">
+        <nav>
+            <ul id="ul_navid" class="flex direction_column align_center justify_content_center nav_ul">
+                <li class="flex_15">
+                    <div class="flex justify_content_center">
+                        <a href="accueil.html">
+                            <!-- logo sur ordinateur -->
+                            <img class="hight100" src="../img/logo-phone.png" alt="logo d'ordinateur">
+                            <!-- logo sur tablette/phone -->
+                            <!-- <img src="../img/logo.png" alt=""> -->
+                        </a>
+                    </div>
+                </li>
+                <li class="flex_10">
+                    <a href="accueil.html">Accueil</a></li>
+                <li class="flex_10">
+                    <a href="contact.html">Contact</a></li>
+                <li class="flex_10">Activité</li>
+                <li class="flex_10">Collabs</li>
+                <li class="flex_10">La méditation</li>
+                <li class="flex_10">
+                    <a href="../page/produit/produit.html">Produit</a>
+                </li>
+                <li class="flex_10">
+                    <a href="a_propos.html">À propos</a>
+                </li>
+                <li class="flex_10">
+                    <a href="nous_rejoindre.html">Nous rejoindre</a>
+                </li>
+            </ul>
+            <!-- <div class="nav">
+                <button class="btn-nav">
+                    <span class="icon-bar top"></span>
+                    <span class="icon-bar middle"></span>
+                    <span class="icon-bar bottom"></span>
+                </button>
+            </div>
+
+            <div class="nav-content hideNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="https://www.17sucai.com/preview/1/2015-12-30/%E8%8F%9C%E5%8D%95/index.html#" class="item-anchor">item 1</a></li>
+                    <li class="nav-item"><a href="https://www.17sucai.com/preview/1/2015-12-30/%E8%8F%9C%E5%8D%95/index.html#" class="item-anchor">item 2</a></li>
+                    <li class="nav-item"><a href="https://www.17sucai.com/preview/1/2015-12-30/%E8%8F%9C%E5%8D%95/index.html#" class="item-anchor">item 3</a></li>
+                    <li class="nav-item"><a href="https://www.17sucai.com/preview/1/2015-12-30/%E8%8F%9C%E5%8D%95/index.html#" class="item-anchor">item 4</a></li>
+                </ul>
+            </div> -->
+        </nav>
     </header>
-    <main>
-        <h1 class="center">ZENefrei</h1>
+
+    <main class="background_beige">
+        <h1 class="center cache">ZENefrei</h1>
         <div>
             <img class="w100" src="../img/image-accueil.jpeg" alt="">
         </div>
+        <article class="flex justify_content_around">
+            <div class="flex_40">
+                <div class="flex justify_content_center">
+                    <p class="flex_100 center">S'abonner à nos réseau social</p>
+                    <p class="flex_100 center">Restez en lien avec nous sur notre réseau social</p>
+                </div>
+            </div>
+            <div class="flex_40">
+                <div class="flex justify_content_center">
+                    <button onclick="location.href='contact.html'">Contactez-nous</button>
+                </div>
+            </div>
+        </article>
     </main>
-    <footer class="flex justify_content_center">
-        <div class="flex_40">
-            <div class="flex justify_content_center">
-                <p class="flex_100 center">S'abonner à nos réseau social</p>
-                <p class="flex_100 center">Restez en lien avec nous sur notre réseau social</p>
-            </div>
-        </div>
-        <div class="flex_40">
-            <div class="flex justify_content_center">
-                <button>Contactez-nous</button>
-            </div>
-        </div>
+    <footer class="flex justify_content_center backgroud_orange_saumon">
+        <script>
+            footer();
+        </script>
     </footer>
-
+    <script>
+        $(window).load(function() {
+            $('.btn-nav').on('click tap', function() {
+                $('.nav-content').toggleClass('showNav hideNav').removeClass('hidden');
+                $(this).toggleClass('animated');
+            });
+        });
+    </script>
 </body>
+
 
 </html>

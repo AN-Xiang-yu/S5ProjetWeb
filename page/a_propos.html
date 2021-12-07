@@ -5,38 +5,89 @@
     <meta charset="utf-8">
     <title>À propos</title>
     <link rel="stylesheet" href="../css/commun.css">
+    <script src="../js/commun.js"></script>
 </head>
 
 <body>
-    <header>
-        <ul class="flex align_center justify_content_center">
-            <li class="flex_15">
-                <div class="flex justify_content_center">
-                    <a href="accueil.html">
-                        <!-- logo sur ordinateur -->
-                        <img class="hight100" src="../img/logo-phone.png" alt="logo d'ordinateur">
-                        <!-- logo sur tablette/phone -->
-                        <!-- <img src="../img/logo.png" alt=""> -->
-                    </a>
-                </div>
-            </li>
-            <li class="flex_10">
-                <a href="accueil.html">Accueil</a></li>
-            <li class="flex_10">
-                <a href="contact.html">Contact</a></li>
-            <li class="flex_10">Activité</li>
-            <li class="flex_10">Collabs</li>
-            <li class="flex_10">La méditation</li>
-            <li class="flex_10">
-                <a href="a_propos.html">À propos</a></li>
-            <li class="flex_10">
-                <a href="nous_rejoindre.html">Nous rejoindre</a></li>
-        </ul>
-    </header>
+    <mon-header></mon-header>
     <main>
         <h1 class="center">À propos</h1>
+        <!-- But de l'association -->
+        <article>
+            <h2 class="center">Notre but</h2>
+            <section>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </section>
+        </article>
+
+        <!-- Histoire de l'association -->
+        <article>
+            <h2 class="center">Notre histoire</h2>
+            <section>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </section>
+        </article>
+
+        <!-- Membres de bureau -->
+        <article>
+            <h2 class="center">Bureau</h2>
+            <section class="flex justify_content_around align_center">
+                <div class="flex_30 center">
+                    <img class="align_center w100" src="../img/An Xiangyu.jpeg" alt="">
+                    <p>Xiangyu AN</p>
+                    <p>Président</p>
+                </div>
+                <div class="flex_30 center">
+                    <img class="align_center w100" src="../img/Victorien.jpeg" alt="">
+                    <p>GBAGUIDI Victorien</p>
+                    <p>Vice-président</p>
+                </div>
+                <div class="flex_30 center">
+                    <img class="align_center w100" src="../img/stanne.jpeg" alt="">
+                    <p>RODRIGUEZ Alysson</p>
+                    <p>Secrétaire</p>
+                </div>
+                <div class="flex_30 center">
+                    <img class="align_center w100" src="../img/stanne.jpeg" alt="">
+                    <p>YE Fangyuan Lisa</p>
+                    <p>Trésorie</p>
+                </div>
+                <div class="flex_30 center">
+                    <img class="align_center w100" src="../img/precillia.jpeg" alt="">
+                    <p>AIT-OUARAB Precillia</p>
+                    <p>Pôle Communication</p>
+                </div>
+                <div class="flex_30 center">
+                    <img class="align_center w100" src="../img/stanne.jpeg" alt="">
+                    <p>PREMANATH Stalennath</p>
+                    <p>Responsable de service</p>
+                </div>
+
+            </section>
+        </article>
+        <article class="flex justify_content_around">
+            <div class="flex_40">
+                <div class="flex justify_content_center">
+                    <p class="flex_100 center">S'abonner à nos réseau social</p>
+                    <p class="flex_100 center">Restez en lien avec nous sur notre réseau social</p>
+                </div>
+            </div>
+            <div class="flex_40">
+                <div class="flex justify_content_center">
+                    <button onclick="location.href='contact.html'">Contactez-nous</button>
+                </div>
+            </div>
+        </article>
     </main>
-    <footer></footer>
+    <mon-footer></mon-footer>
 </body>
 
 </html>
