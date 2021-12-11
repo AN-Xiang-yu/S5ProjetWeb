@@ -6,37 +6,37 @@
     <title>Nous rejoindre</title>
     <link rel="stylesheet" href="../css/commun.css">
     <script src="../js/commun.js"></script>
-    <script type="text/javascript" src="../js/contact.js"></script>
+    <script type="text/javascript" src="../js/nous_joindre.js"></script>
 </head>
 
 <body>
     <mon-header></mon-header>
     <main>
         <h1 class="center">Nous rejoindre</h1>
-        <article>
-            <h2 class="center">Inscription</h2>
-            <form method="post" action="nous_rejoindre.html" target="_blank" class="flex align_center justify_content_center">
-                <div class="flex_100 center">
+        <article class="flex">
+            <h2 class="center flex_100">Inscription</h2>
+            <form method="post" action="#" class="flex align_center justify_content_center w300px m_auto" name="infoInscription" onsubmit="return false">
+                <div class="flex_100 center flex justify_content_between pad-05r">
                     <label for="nom">Nom : </label>
-                    <input type="text" name="username" id="nom" required>
+                    <input type="text" name="nom" id="nom" required>
                 </div>
-                <div class="flex_100 center">
+                <div class="flex_100 center flex justify_content_between pad-05r">
                     <label for="prenom">Prénom : </label>
                     <input type="text" name="prenom" id="prenom" required>
                 </div>
-                <div class="flex_100 center">
+                <div class="flex_100 center flex justify_content_between pad-05r">
                     <label for="prenom">Téléphone : </label>
                     <input type="tel" name="telephone" id="telephone" required>
                 </div>
-                <div class="flex_100 center">
+                <div class="flex_100 center flex justify_content_between pad-05r">
                     <label for="email">E-mail : </label>
                     <input type="email" name="email" id="email" required>
                 </div>
-                <div class="flex_100 center">
+                <div class="flex_100 center flex justify_content_between pad-05r">
                     <label for="promo">Promo : </label>
                     <input type="text" name="promo" id="promo" required>
                 </div>
-                <div class="flex_100 center">
+                <div class="flex_100 center flex justify_content_between pad-05r">
                     <label for="specialite">Spécialité : </label>
                     <input type="text" name="specialite" id="specialite" required>
                 </div>
@@ -44,39 +44,10 @@
                     <button type="submit" id="boutonEnvoyer" onclick="afficherInformationSaisie()">Envoyer</button>
                 </div>
             </form>
-            <!-- Demander au prof -->
-            <div class="center">
-                <button type="subit" id="boutonEnvoyer" onclick="afficherInformationSaisie()">Envoyer</button>
-            </div>
         </article>
-        <article class="flex justify_content_center">
-            <h2 class="flex_100 center">Confirmation des informations</h2>
-            <table class="border-black w80">
-                <tr>
-                    <th class="left border-black w10">Nom</th>
-                    <td class="border-black" id="obtenirNom"></td>
-                </tr>
-                <tr>
-                    <th class="left border-black">Prénom</th>
-                    <td class="border-black" id="obtenirPrenom"></td>
-                </tr>
-                <tr>
-                    <th class="left border-black">Téléphone </th>
-                    <td class="border-black" id="obtenirTel"></td>
-                </tr>
-                <tr>
-                    <th class="left border-black">E-mail </th>
-                    <td class="border-black" id="obtenirEmail"></td>
-                </tr>
-                <tr>
-                    <th class="left border-black">Promo </th>
-                    <td class="border-black" id="obtenirPromo"></td>
-                </tr>
-                <tr>
-                    <th class="left border-black">Spécialité </th>
-                    <td class="border-black" id="obtenirSpecialite"></td>
-                </tr>
-            </table>
+        <article class="confirmation w400px m_auto">
+            <section class="section-confirmation">
+            </section>
         </article>
     </main>
     <mon-footer></mon-footer>

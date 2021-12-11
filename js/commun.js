@@ -1,5 +1,6 @@
 var tailleEcranOrdinateur = 1200;
 var tailleEcranSmartphone = 768;
+afficherDate()
 
 class MonHeader extends HTMLElement {
     connectedCallback() {
@@ -45,9 +46,9 @@ customElements.define('mon-header', MonHeader)
 class MonFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <footer class="backgroud_orange_saumon">
+        <footer class="backgroud_orange_saumon w100">
             <p class="center flex_100">Copyright©2013-2021 BEM - All Rights Reserved.</p>
-            <p class="center flex_100">zenefrei.fr</p>
+            <p class="center flex_100 flex justify_content_center"><span>zenefrei.fr</span> <span id="dateheure" class="ab-right"></span></p>
         </footer>
         `
     }
@@ -96,8 +97,6 @@ function ajouterChemin() {
     }
 }
 
-
-
 function changerNav() {
     let largueurEcran = $(window).width();
 
@@ -107,5 +106,23 @@ function changerNav() {
     } else {
         let x = document.getElementById("nav_ul")
         x += "xxxx";
+    }
+}
+
+function pause(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+//afficher date et heure
+async function afficherDate() {
+    while (true) {
+        await pause(1);
+        var cejour = new Date();
+        var options = { weekday: "long", year: "numeric", month: "long", day: "2-digit" };
+        var date = cejour.toLocaleDateString("fr-FR", options);
+        var heure = ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
+        var dateheure = date + " " + heure;
+        var dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+        document.getElementById('dateheure').innerHTML = dateheure;
     }
 }

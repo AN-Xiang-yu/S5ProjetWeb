@@ -8,6 +8,13 @@
 }
 
 
+/* Enlever la partie blanche en bas */
+
+html {
+    height: 100%;
+}
+
+
 /* Enlever propriété de li */
 
 li {
@@ -33,10 +40,10 @@ body {
 /* header */
 
 header {
-    /* fixer footer en bas */
+    /* fixer header en bas */
     position: fixed;
     top: 0;
-    /* l'espace que footer prend */
+    /* l'espace que header prend */
     height: var(--espace_header);
 }
 
@@ -45,6 +52,12 @@ header {
 
 main {
     padding-top: var(--espace_header);
+}
+
+footer {
+    /* fixer footer en bas */
+    position: fixed;
+    bottom: 0;
 }
 
 
@@ -125,23 +138,27 @@ table {
     flex-direction: column;
 }
 
-.self_start {
+.direction-row {
+    flex-direction: row;
+}
+
+.align-self-start {
     align-self: flex-start;
 }
 
-.self_end {
+.align-self-end {
     align-self: flex-end;
 }
 
-.self_center {
+.align-self-center {
     align-self: center;
 }
 
-.self_baseline {
+.align-self-baseline {
     align-self: baseline;
 }
 
-.self_stretch {
+.align-self-stretch {
     align-self: stretch;
 }
 
@@ -187,6 +204,14 @@ table {
 
 .flex_10 {
     flex: 0 0 10%
+}
+
+
+/* position fixed */
+
+.ab-right {
+    position: fixed;
+    right: 0.5rem;
 }
 
 
@@ -239,11 +264,26 @@ table {
     width: 10%;
 }
 
+.w300px {
+    width: 300px;
+}
+
+.w400px {
+    width: 400px;
+}
+
 
 /*margin*/
 
 .m_auto {
     margin: auto;
+}
+
+
+/*padding*/
+
+.pad-05r {
+    padding: .5rem;
 }
 
 
@@ -259,6 +299,17 @@ table {
 
 .right {
     text-align: right;
+}
+
+
+/* float */
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
 }
 
 
