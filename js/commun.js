@@ -2,12 +2,13 @@ var tailleEcranOrdinateur = 1200;
 var tailleEcranSmartphone = 768;
 afficherDate()
 
+
 class MonHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
          <header class="w100 backgroud-orange-saumon">
             <nav>
-                <ul class="flex align-center justify-content-center">
+                <ul id="barre-menu" class="flex direction-column align-center justify-content-center">
                     <li class="flex-15">
                         <div class="flex justify-content-center">
                             <a class="ajouter_chemin" href="accueil.html">
@@ -22,7 +23,10 @@ class MonHeader extends HTMLElement {
                         <a class="ajouter_chemin" href="accueil.html">Accueil</a></li>
                     <li id="contact" class="flex-10">
                         <a class="ajouter_chemin" href="contact.html">Contact</a></li>
-                    <li id="activite" class="flex-10">Activité</li>
+                    <li id="activite" class="flex-10">
+                        <a id="activite" href="../page/activite/activite.html">Activité</a>
+                    </li>
+                    </li>
                     <li id="produit" class="flex-10">
                         <a href="../page/produit/produit.html">Produit</a>
                     </li>
@@ -75,11 +79,11 @@ function ajouterChemin() {
 
     //le lien dans le menu de navigation de la page courante va naviguer sur elle même
     memeAChange.children[0].href = "#"
-
+    console.log(nomPage);
     switch (nomPage) {
-        case "accueil", "contact", "a_propos", "nous_rejoindre":
-            break;
-        default:
+        case "produit":
+        case "activite":
+        case "activite-evenement":
             var aChange = document.getElementsByClassName("ajouter_chemin")
             var imgChange = document.getElementsByClassName("ajouter_chemin_image")
 
@@ -92,18 +96,21 @@ function ajouterChemin() {
                 img.setAttribute("src", "../" + img.getAttribute("src"))
             }
             break;
+        default:
+            break;
+
     }
 }
 
-function changerNav() {
-    let largueurEcran = $(window).width();
+//modifier la façon d'afficher le barre de navigation
+async function changerNav() {
+    let largueurEcran = window.innerWidth;
+    let barraNav = document.getElementById('barre-menu')
+    let barraNavClass = barraNav.getAttribute("class")
 
     if (largueurEcran > tailleEcranOrdinateur) {
-        document.querySelector('.nav_ul').classList.add('mystyle');
-        // document.getElementById("nav_ul").className.remove("direction-column");
-    } else {
-        let x = document.getElementById("nav_ul")
-        x += "xxxx";
+        let classModifie = barraNavClass.replace('direction-column', '');
+        barraNav.setAttribute("class", classModifie)
     }
 }
 
