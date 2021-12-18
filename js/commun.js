@@ -5,11 +5,11 @@ afficherDate()
 class MonHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-         <header class="w100 backgroud_orange_saumon">
+         <header class="w100 backgroud-orange-saumon">
             <nav>
-                <ul class="flex align_center justify_content_center">
-                    <li class="flex_15">
-                        <div class="flex justify_content_center">
+                <ul class="flex align-center justify-content-center">
+                    <li class="flex-15">
+                        <div class="flex justify-content-center">
                             <a class="ajouter_chemin" href="accueil.html">
                                 <!-- logo sur ordinateur -->
                                 <img class="hight100 ajouter_chemin_image" src="../img/logo-phone.png" alt="logo d'ordinateur">
@@ -18,18 +18,18 @@ class MonHeader extends HTMLElement {
                             </a>
                         </div>
                     </li>
-                    <li id="accueil" class="flex_10">
+                    <li id="accueil" class="flex-10">
                         <a class="ajouter_chemin" href="accueil.html">Accueil</a></li>
-                    <li id="contact" class="flex_10">
+                    <li id="contact" class="flex-10">
                         <a class="ajouter_chemin" href="contact.html">Contact</a></li>
-                    <li id="activite" class="flex_10">Activité</li>
-                    <li id="produit" class="flex_10">
+                    <li id="activite" class="flex-10">Activité</li>
+                    <li id="produit" class="flex-10">
                         <a href="../page/produit/produit.html">Produit</a>
                     </li>
-                    <li id="a_propos" class="flex_10">
+                    <li id="a_propos" class="flex-10">
                         <a class="ajouter_chemin" href="a_propos.html">À propos</a>
                     </li>
-                    <li id="nous_rejoindre" class="flex_10">
+                    <li id="nous_rejoindre" class="flex-10">
                         <a class="ajouter_chemin" href="nous_rejoindre.html">Nous rejoindre</a>
                     </li>
                 </ul>
@@ -44,9 +44,9 @@ customElements.define('mon-header', MonHeader)
 class MonFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <footer class="backgroud_orange_saumon w100">
-            <p class="center flex_100">Copyright©2013-2021 BEM - All Rights Reserved.</p>
-            <p class="center flex_100 flex justify_content_center"><span>zenefrei.fr</span> <span id="dateheure" class="ab-right"></span></p>
+        <footer class="backgroud-orange-saumon w100">
+            <p class="center flex-100">Copyright©2013-2021 BEM - All Rights Reserved.</p>
+            <p class="center flex-100 flex justify-content-center"><span>zenefrei.fr</span> <span id="dateheure" class="ab-right"></span></p>
         </footer>
         `
     }
@@ -100,7 +100,7 @@ function changerNav() {
 
     if (largueurEcran > tailleEcranOrdinateur) {
         document.querySelector('.nav_ul').classList.add('mystyle');
-        // document.getElementById("nav_ul").className.remove("direction_column");
+        // document.getElementById("nav_ul").className.remove("direction-column");
     } else {
         let x = document.getElementById("nav_ul")
         x += "xxxx";

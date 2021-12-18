@@ -1,10 +1,10 @@
 /* CSS variable */
 
 :root {
-    --espace_header: 25rem;
+    --espace-header: 25rem;
     --beige: #F5D4B1;
-    --orange_saumon: #F88E55;
-    --inter_ligne: 2rem;
+    --orange-saumon: #F88E55;
+    --inter-ligne: 2rem;
 }
 
 
@@ -33,7 +33,7 @@ ul {
 
 body {
     margin: 0;
-    line-height: var(--inter_ligne);
+    line-height: var(--inter-ligne);
 }
 
 
@@ -44,14 +44,14 @@ header {
     position: fixed;
     top: 0;
     /* l'espace que header prend */
-    height: var(--espace_header);
+    height: var(--espace-header);
 }
 
 
 /* main */
 
 main {
-    padding-top: var(--espace_header);
+    padding-top: var(--espace-header);
 }
 
 footer {
@@ -74,11 +74,11 @@ table {
 
 /* backgroud color */
 
-.backgroud_orange_saumon {
-    background-color: var(--orange_saumon);
+.backgroud-orange-saumon {
+    background-color: var(--orange-saumon);
 }
 
-.background_beige {
+.background-beige {
     background-color: var(--beige);
 }
 
@@ -98,43 +98,43 @@ table {
     flex-wrap: reverse;
 }
 
-.justify_content_between {
+.justify-content-between {
     justify-content: space-between;
 }
 
-.justify_content_around {
+.justify-content-around {
     justify-content: space-around;
 }
 
-.justify_content_center {
+.justify-content-center {
     justify-content: center;
 }
 
-.justify_content_end {
+.justify-content-end {
     justify-content: end;
 }
 
-.justify_content_start {
+.justify-content-start {
     justify-content: flex-start;
 }
 
-.align_start {
+.align-start {
     justify-content: flex-start
 }
 
-.align_end {
+.align-end {
     align-items: flex-end;
 }
 
-.align_center {
+.align-center {
     align-items: center;
 }
 
-.align_stretch {
+.align-stretch {
     align-items: stretch;
 }
 
-.direction_column {
+.direction-column {
     flex-direction: column;
 }
 
@@ -162,47 +162,47 @@ table {
     align-self: stretch;
 }
 
-.flex_100 {
+.flex-100 {
     flex: 0 0 100%;
 }
 
-.flex_90 {
+.flex-90 {
     flex: 0 0 90%
 }
 
-.flex_80 {
+.flex-80 {
     flex: 0 0 80%
 }
 
-.flex_70 {
+.flex-70 {
     flex: 0 0 70%;
 }
 
-.flex_60 {
+.flex-60 {
     flex: 0 0 60%;
 }
 
-.flex_50 {
+.flex-50 {
     flex: 0 0 50%;
 }
 
-.flex_40 {
+.flex-40 {
     flex: 0 0 40%;
 }
 
-.flex_30 {
+.flex-30 {
     flex: 0 0 30%
 }
 
-.flex_20 {
+.flex-20 {
     flex: 0 0 20%;
 }
 
-.flex_15 {
+.flex-15 {
     flex: 0 0 15%
 }
 
-.flex_10 {
+.flex-10 {
     flex: 0 0 10%
 }
 
@@ -275,7 +275,7 @@ table {
 
 /*margin*/
 
-.m_auto {
+.m-auto {
     margin: auto;
 }
 
@@ -322,6 +322,6 @@ table {
 
 @media(min-width: 1200px) {
      :root {
-        --espace_header: 8rem;
+        --espace-header: 8rem;
     }
 }
