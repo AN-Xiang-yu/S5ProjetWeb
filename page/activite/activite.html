@@ -5,21 +5,15 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="../../css/commun.css">
-    <script src="../../js/commun.js"></script>
 
     <style>
-        .flex-container {
-            display: flex;
-            background-color: DodgerBlue;
-        }
-        
         .flex-container>div {
             width: 100%;
             text-align: center;
-            background-color: #f1f1f1;
             margin: 0px;
             padding: 10px;
             font-size: 30px;
+            flex-direction: row;
         }
         
         .left {
@@ -30,20 +24,30 @@
 </head>
 
 <body>
-
+    <mon-header></mon-header>
     <h1>Evenements Passés</h1>
 
-    <div class="flex-container">
-        <div class="left">
-            1
+    <div class="flex-container justify-content-around direction-column">
+        <div>
+            <img class="w90 left" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
+            <h4>Journée du volontariat</h4>
         </div>
         <div>
             <img class="w90" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
             <h4>Journée du volontariat</h4>
         </div>
-        <div>3</div>
+        <div>
+            <img class="w90" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
+            <h4>Journée du volontariat</h4>
+        </div>
     </div>
+    <mon-footer></mon-footer>
 
 </body>
+<script src="../../js/commun.js"></script>
+<script>
+    ajouterChemin()
+    changerNav()
+</script>
 
 </html>
