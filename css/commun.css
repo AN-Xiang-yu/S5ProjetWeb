@@ -54,11 +54,14 @@ main {
     padding-top: var(--espace-header);
 }
 
-footer {
-    /* fixer footer en bas */
+
+/* fixer footer en bas */
+
+
+/* footer {
     position: fixed;
     bottom: 0;
-}
+} */
 
 
 /* table */
@@ -92,6 +95,11 @@ table {
 .flex {
     display: flex;
     flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .reverse {
