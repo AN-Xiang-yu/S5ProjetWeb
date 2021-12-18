@@ -23,8 +23,6 @@ class MonHeader extends HTMLElement {
                     <li id="contact" class="flex_10">
                         <a class="ajouter_chemin" href="contact.html">Contact</a></li>
                     <li id="activite" class="flex_10">Activité</li>
-                    <li id="collabs" class="flex_10">Collabs</li>
-                    <li id="meditation" class="flex_10">La méditation</li>
                     <li id="produit" class="flex_10">
                         <a href="../page/produit/produit.html">Produit</a>
                     </li>
@@ -67,7 +65,7 @@ function recupererNomPage() {
 //ajouter css dans menu de navigation pour la page actuelle
 function ajouterCssMenuNavigation() {
     var liChange = document.getElementById(recupererNomPage())
-    liChange.classList.add("page_actuel")
+    liChange.classList.add("page-actuel")
 }
 
 //changer le chemin si les pages sont pas dans les répertoires
