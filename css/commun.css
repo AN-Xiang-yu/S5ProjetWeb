@@ -1,9 +1,11 @@
 /* CSS variable */
 
 :root {
-    --espace-header: 25rem;
+    /* color */
     --beige: #F5D4B1;
     --orange-saumon: #F88E55;
+    --leger-blanc: rgba(255, 255, 255, 0.25);
+    --demi-noire: rgba(0, 0, 0, 0.5);
     --inter-ligne: 2rem;
 }
 
@@ -25,7 +27,13 @@ li {
 }
 
 ul {
-    padding-inline-start: 0px
+    padding-inline-start: 0px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -43,8 +51,35 @@ header {
     /* fixer header en bas */
     position: fixed;
     top: 0;
-    /* l'espace que header prend */
-    height: var(--espace-header);
+}
+
+header>nav>ul>li>a {
+    color: white;
+}
+
+header>nav>ul>li>a:hover {
+    color: black;
+    transition: all 0.5s linear;
+}
+
+.page-actuel {
+    background-color: var(--leger-blanc);
+    border-radius: 2.5px;
+    color: black;
+}
+
+.page-actuel>a {
+    color: black;
+}
+
+.barre-nav {
+    padding: 5px 0;
+    width: 25px;
+    height: 3px;
+    background: black;
+    background-clip: content-box;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 
 
@@ -85,8 +120,30 @@ table {
     background-color: var(--beige);
 }
 
+
+/* cursor */
+
+.cr-pointer {
+    cursor: pointer;
+}
+
+
+/* display */
+
 .cache {
     display: none;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
 }
 
 
@@ -214,6 +271,22 @@ table {
     flex: 0 0 10%
 }
 
+.flex-5 {
+    flex: 0 0 5%
+}
+
+.shrink0 {
+    flex-shrink: 0;
+}
+
+.shrink1 {
+    flex-shrink: 1;
+}
+
+.shrink2 {
+    flex-shrink: 2;
+}
+
 
 /* position fixed */
 
@@ -227,6 +300,10 @@ table {
 
 .hight100 {
     height: 100px;
+}
+
+.hight75 {
+    height: 75px;
 }
 
 
@@ -287,6 +364,18 @@ table {
     margin: auto;
 }
 
+.mt-025r {
+    margin-top: .25rem;
+}
+
+.ml-05r {
+    margin-left: .5rem;
+}
+
+.mr-05r {
+    margin-right: .5rem;
+}
+
 
 /*padding*/
 
@@ -320,16 +409,27 @@ table {
     float: left;
 }
 
+.ordi-affiche {
+    display: none;
+}
+
 
 /* Tablette */
 
-@media(min-width:768px) {}
+@media(min-width: 768px) {}
 
 
 /* Ordinateur */
 
 @media(min-width: 1200px) {
      :root {
-        --espace-header: 8rem;
+        --espace-header: 5rem;
+    }
+    .ordi-affiche {
+        display: inline-block;
+    }
+    header {
+        /* l'espace que header prend */
+        height: var(--espace-header);
     }
 }

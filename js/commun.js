@@ -1,6 +1,7 @@
 var tailleEcranOrdinateur = 1200;
 var tailleEcranSmartphone = 768;
 afficherDate()
+window.addEventListener("resize", changerNav)
 
 
 class MonHeader extends HTMLElement {
@@ -8,35 +9,37 @@ class MonHeader extends HTMLElement {
         this.innerHTML = `
          <header class="w100 backgroud-orange-saumon">
             <nav>
-                <ul id="barre-menu" class="flex direction-column align-center justify-content-center">
-                    <li class="flex-15">
+                <ul id="barre-menu" class="flex direction-column align-center justify-content-start flex-70 ">
+                    <li class="flex-10">
                         <div class="flex justify-content-center">
                             <a class="ajouter_chemin" href="accueil.html">
                                 <!-- logo sur ordinateur -->
-                                <img class="hight100 ajouter_chemin_image" src="../img/logo-phone.png" alt="logo d'ordinateur">
+                                <img class="hight75 ajouter_chemin_image mt-025r" src="../img/logo-phone.png" alt="logo d'ordinateur">
                                 <!-- logo sur tablette/phone -->
                                 <!-- <img src="../img/logo.png" alt=""> -->
                             </a>
                         </div>
                     </li>
-                    <li id="accueil" class="flex-10">
+                    <li id="accueil" class="flex-10 center">
                         <a class="ajouter_chemin" href="accueil.html">Accueil</a></li>
-                    <li id="contact" class="flex-10">
+                    <li id="contact" class="flex-10 center">
                         <a class="ajouter_chemin" href="contact.html">Contact</a></li>
-                    <li id="activite" class="flex-10">
-                        <a id="activite" href="../page/activite/activite.html">Activité</a>
+                    <li id="activite" class="flex-10 center">
+                        <a class="ajouter_chemin" href="../page/activite/activite.html">Activité</a>
                     </li>
                     </li>
-                    <li id="produit" class="flex-10">
-                        <a href="../page/produit/produit.html">Produit</a>
+                    <li id="produit" class="flex-10 center">
+                        <a class="ajouter_chemin" href="../page/produit/produit.html">Produit</a>
                     </li>
-                    <li id="a_propos" class="flex-10">
+                    <li id="a_propos" class="flex-10 center">
                         <a class="ajouter_chemin" href="a_propos.html">À propos</a>
                     </li>
-                    <li id="nous_rejoindre" class="flex-10">
+                    <li id="nous_rejoindre" class="flex-10 center">
                         <a class="ajouter_chemin" href="nous_rejoindre.html">Nous rejoindre</a>
                     </li>
+                    
                 </ul>
+                <div id="barre-nav"></div>
             </nav>
         </header>
         `
@@ -50,7 +53,7 @@ class MonFooter extends HTMLElement {
         this.innerHTML = `
         <footer class="backgroud-orange-saumon w100">
             <p class="center flex-100">Copyright©2013-2021 BEM - All Rights Reserved.</p>
-            <p class="center flex-100 flex justify-content-center"><span>zenefrei.fr</span> <span id="dateheure" class="ab-right"></span></p>
+            <p class="center flex-100 flex justify-content-between"><span class="flex-30"></span><span class="flex-30">zenefrei.fr</span> <span class="flex-30"> <span id="dateheure" class="ordi-affiche"></span> </span></p>
         </footer>
         `
     }
@@ -75,10 +78,7 @@ function ajouterCssMenuNavigation() {
 //changer le chemin si les pages sont pas dans les répertoires
 function ajouterChemin() {
     var nomPage = recupererNomPage()
-    var memeAChange = document.getElementById(nomPage)
 
-    //le lien dans le menu de navigation de la page courante va naviguer sur elle même
-    memeAChange.children[0].href = "#"
     console.log(nomPage);
     switch (nomPage) {
         case "produit":
@@ -103,14 +103,20 @@ function ajouterChemin() {
 }
 
 //modifier la façon d'afficher le barre de navigation
-async function changerNav() {
+function changerNav() {
     let largueurEcran = window.innerWidth;
-    let barraNav = document.getElementById('barre-menu')
-    let barraNavClass = barraNav.getAttribute("class")
+    let barreMenu = document.getElementById('barre-menu')
+    let barreNavClass = barreMenu.getAttribute("class")
+    let nav = document.querySelector("nav")
+
+    console.log(nav);
 
     if (largueurEcran > tailleEcranOrdinateur) {
-        let classModifie = barraNavClass.replace('direction-column', '');
-        barraNav.setAttribute("class", classModifie)
+        let classModifie = barreNavClass.replace('direction-column', '')
+        barreMenu.setAttribute("class", classModifie)
+    } else {
+        barreMenu.classList.add("direction-column")
+        nav.classList.add("flex", "justify-content-around", "align-center")
     }
 }
 
@@ -130,4 +136,8 @@ async function afficherDate() {
         var dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
         document.getElementById('dateheure').innerHTML = dateheure;
     }
+}
+
+function classExiste() {
+
 }
