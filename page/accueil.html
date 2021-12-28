@@ -14,7 +14,7 @@
     <main class="background-beige">
         <h1 class="center cache">ZENefrei</h1>
         <div>
-            <img class="w100" src="../img/image-accueil.jpeg" alt="">
+            <img class="w100 img-couche" src="../img/image-accueil.jpeg" alt="">
         </div>
         <article class="flex justify-content-around">
             <div class="flex-40">
@@ -29,13 +29,20 @@
                 </div>
             </div>
         </article>
+        <img class="img-couche" src="../img/coussin.png" alt="">
+        <div id="container-couche-img" class="cache fixed backgroud-demi-noire top0 left0 index-2 hight100 w100 h100 img-roulante-container">
+            <img id="couche-img" class="img-roulante fixed" style="border:5px solid #fff; position:fixed; right:25%; left:25%;" src="" />
+        </div>
     </main>
+
     <mon-footer></mon-footer>
 </body>
 <script type="text/javascript" src="../js/commun.js"></script>
 <script>
     changerNav()
     ajouterCssMenuNavigation()
+    mettreImgDansCouche()
+    zoomerImage()
 </script>
 
 </html>

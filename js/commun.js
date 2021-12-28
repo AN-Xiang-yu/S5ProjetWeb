@@ -79,7 +79,6 @@ function ajouterCssMenuNavigation() {
 function ajouterChemin() {
     var nomPage = recupererNomPage()
 
-    console.log(nomPage);
     switch (nomPage) {
         case "produit":
         case "activite":
@@ -109,8 +108,6 @@ function changerNav() {
     let barreNavClass = barreMenu.getAttribute("class")
     let nav = document.querySelector("nav")
 
-    console.log(nav);
-
     if (largueurEcran > tailleEcranOrdinateur) {
         let classModifie = barreNavClass.replace('direction-column', '')
         barreMenu.setAttribute("class", classModifie)
@@ -138,6 +135,57 @@ async function afficherDate() {
     }
 }
 
-function classExiste() {
+function zoomerImage() {
+    const imgRoulanteContainer = document.querySelector(".img-roulante-container");
+    const imgRoulante = document.querySelector(".img-roulante");
+    var wDefaut = 100;
 
+    imgRoulante.style.width = `${wDefaut}%`
+    imgRoulanteContainer.onmouseover = () => {
+        imgRoulante.onmousewheel = (b) => {
+            b.wheelDelta < 0 ? wDefaut-- : wDefaut++;
+            imgRoulante.style.width = `${wDefaut}%`
+        }
+    }
+}
+
+function mettreImgDansCouche() {
+    $(".img-couche").click(function() {
+        var _this = $(this); //将当前的pimg元素作为_this传入函数 
+        afficherImage(_this);
+    });
+}
+
+function afficherImage(_this) {
+
+    var containerCoucheImg = document.querySelector("#container-couche-img")
+    var coucheImg = document.querySelector("#couche-img")
+
+    var src = _this.attr("src");
+    coucheImg.setAttribute("src", src);
+
+    $("<img/>").attr("src", src).load(function() {
+        var largeurPage = $(window).width();
+        var hauteurPage = $(window).height();
+        var vraieLargeur = this.width;
+        var vraieHauteur = this.height;
+        var largeurImg, hauteurImg;
+        var scale = 0.6;
+
+        largeurImg = scale * largeurPage
+        hauteurImg = largeurImg / vraieLargeur * vraieHauteur
+        coucheImg.height = hauteurImg; //以最终的宽度对图片缩放 
+
+        var largeur = (largeurPage - largeurImg) / 2; //计算图片与窗口左边距 
+        var hauteur = (hauteurPage - hauteurImg) / 2; //计算图片与窗口上边距 
+
+        coucheImg.style.cssText = "top:" + (hauteur) + "px; right:" + (largeur) + "px; ";
+
+        containerCoucheImg.classList.add("block")
+        containerCoucheImg.classList.remove("cache")
+    });
+    containerCoucheImg.onclick = function() {
+        containerCoucheImg.classList.add("cache")
+        containerCoucheImg.classList.remove("block")
+    };
 }

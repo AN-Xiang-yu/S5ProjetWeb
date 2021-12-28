@@ -120,6 +120,10 @@ table {
     background-color: var(--beige);
 }
 
+.backgroud-demi-noire {
+    background-color: var(--demi-noire);
+}
+
 
 /* cursor */
 
@@ -288,11 +292,27 @@ table {
 }
 
 
-/* position fixed */
+/* position */
 
 .ab-right {
     position: fixed;
     right: 0.5rem;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.top0 {
+    top: 0;
+}
+
+.left0 {
+    left: 0;
 }
 
 
@@ -304,6 +324,10 @@ table {
 
 .hight75 {
     height: 75px;
+}
+
+.h100 {
+    height: 100%;
 }
 
 
@@ -411,6 +435,17 @@ table {
 
 .ordi-affiche {
     display: none;
+}
+
+
+/*z-index*/
+
+.index-2 {
+    z-index: 2;
+}
+
+.img-couche {
+    cursor: zoom-in;
 }
 
 
