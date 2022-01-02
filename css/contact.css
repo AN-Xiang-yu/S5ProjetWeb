@@ -10,29 +10,42 @@
 }
 
 
+/* contenu */
+
+#contenu {
+    width: 12.5rem;
+    height: 10rem;
+}
+
+
+/* bouton container */
+
+.form-contact-bouton-container {
+    width: 100%;
+}
+
+
 /* contact */
 
 .contact-container {
     width: 300px;
 }
 
-.t-e-a-container {
-    background: linear-gradient(to right, white, var(--beige));
-    animation: changerBackgroundTEA 6s linear infinite;
+@keyframes changerBackgroundFormContact {
+    0% {
+        background: url(../img/contact/background_formulaire_tres_petit.jpg);
+    }
+    100% {
+        background: url(../img/contact/background_formulaire2_tres_petit.jpg);
+    }
 }
+
+
+/* réseaux sociaux */
 
 .reseau-social-container {
     background: linear-gradient(to right, var(--beige), white);
     animation: changerBackgroundReseauSocial 6s linear infinite;
-}
-
-@keyframes changerBackgroundTEA {
-    from {
-        filter: hue-rotate(0deg);
-    }
-    to {
-        filter: hue-rotate(360deg);
-    }
 }
 
 @keyframes changerBackgroundReseauSocial {
@@ -56,28 +69,21 @@
     opacity: 0.5;
 }
 
-@keyframes changerBackgroundFormContact {
-    0% {
-        background: url(../img/contact/background_formulaire_tres_petit.jpg);
-    }
-    100% {
-        background: url(../img/contact/background_formulaire2_tres_petit.jpg);
-    }
+
+/* téléphone, e-mail et adresse */
+
+.t-e-a-container {
+    background: linear-gradient(to right, white, var(--beige));
+    animation: changerBackgroundTEA 6s linear infinite;
 }
 
-
-/* contenu */
-
-#contenu {
-    width: 12.5rem;
-    height: 10rem;
-}
-
-
-/* bouton container */
-
-.form-contact-bouton-container {
-    width: 100%;
+@keyframes changerBackgroundTEA {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
 }
 
 
