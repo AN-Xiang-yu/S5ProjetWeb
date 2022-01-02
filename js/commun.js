@@ -102,10 +102,10 @@ function ajouterChemin() {
 
 //modifier la façon d'afficher le barre de navigation
 function changerNav() {
-    let largueurEcran = window.innerWidth;
-    let barreMenu = document.getElementById('barre-menu')
-    let barreNavClass = barreMenu.getAttribute("class")
-    let nav = document.querySelector("nav")
+    var largueurEcran = window.innerWidth;
+    var barreMenu = document.getElementById('barre-menu')
+    var barreNavClass = barreMenu.getAttribute("class")
+    var nav = document.querySelector("nav")
 
     if (largueurEcran > tailleEcranOrdinateur) {
         let classModifie = barreNavClass.replace('direction-column', '')
@@ -133,6 +133,8 @@ async function afficherDate() {
         document.getElementById('dateheure').innerHTML = dateheure;
     }
 }
+
+
 
 function zoomerImage() {
     const imgRoulanteContainer = document.querySelector(".img-roulante-container");

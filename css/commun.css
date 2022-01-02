@@ -3,6 +3,7 @@
 :root {
     /* color */
     --blue-leger: rgb(118, 174, 241);
+    --blue-tres-leger: #b9c9fe;
     --beige: #F5D4B1;
     --orange-saumon: #F88E55;
     --leger-blanc: rgba(255, 255, 255, 0.25);
@@ -136,6 +137,15 @@ article {
 
 .border-leger-noire {
     border: 1px var(--leger-noire) solid;
+}
+
+.border-tb-blanc {
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+}
+
+.border-r-dashed-blanc {
+    border-right: 1px white dashed;
 }
 
 
@@ -414,6 +424,11 @@ table {
 
 .m-auto {
     margin: auto;
+}
+
+.mtb-inter {
+    margin-top: var(--inter-ligne);
+    margin-bottom: var(--inter-ligne);
 }
 
 .mt-025r {

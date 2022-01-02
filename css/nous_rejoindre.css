@@ -2,6 +2,9 @@
     background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/nous_rejoindre.jpg);
 }
 
+
+/* formulaire d'inscription */
+
 .form-inscription-container {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_tres_petit.jpg);
     background-repeat: no-repeat;
@@ -14,17 +17,32 @@
 }
 
 
+/* table de confirmation */
+
+.section-confirmation-container {
+    width: 340px;
+}
+
+.confirmation-table {
+    background-color: var(--blue-tres-leger);
+}
+
+.confiramtion-table-tr:hover {
+    background-color: var(--blue-leger);
+}
+
+
 /* Écran très petit */
 
 @media(min-width: 576px) {
-    .form-inscription-container {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_petit.jpg);
-    }
     .form-inscription {
         width: calc(0.8*576px);
     }
     .form-inscription-element {
         flex: 0 0 40%;
+    }
+    .section-confirmation-container {
+        width: 450px;
     }
 }
 
@@ -33,7 +51,7 @@
 
 @media(min-width: 768px) {
     .form-inscription-container {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_moyen.jpg);
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_petit.jpg);
     }
     .form-inscription {
         width: calc(0.8*768px);
@@ -45,7 +63,7 @@
 
 @media(min-width: 992px) {
     .form-inscription-container {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_grand.jpg);
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_moyen.jpg);
     }
 }
 
@@ -53,6 +71,9 @@
 /* Écran grand */
 
 @media(min-width: 1200px) {
+    .form-inscription-container {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_grand.jpg);
+    }
     .form-inscription {
         width: calc(0.8*1200px);
     }

@@ -1,80 +1,101 @@
-function afficherInformationSaisie() {
+function afficherTableauConfirmation() {
     var selectionnerFormulaire = document.forms.infoInscription
+        //vérifier si les cases nécessaire sont remplies 
     if (!selectionnerFormulaire.elements.nom.checkValidity() ||
         !selectionnerFormulaire.elements.prenom.checkValidity() ||
+        !selectionnerFormulaire.elements.naissance.checkValidity() ||
+        !selectionnerFormulaire.elements.specialite.checkValidity() ||
         !selectionnerFormulaire.elements.telephone.checkValidity() ||
         !selectionnerFormulaire.elements.email.checkValidity() ||
-        !selectionnerFormulaire.elements.promo.checkValidity() ||
-        !selectionnerFormulaire.elements.specialite.checkValidity()
+        !selectionnerFormulaire.elements.regle.checkValidity()
     ) {
         return
     }
 
     var article = document.querySelector(".confirmation")
-    var ancienneSection = document.querySelector(".section-confirmation")
+    var ancienneSection = document.querySelector(".section-confirmation-container")
 
     const nouvelleSection = document.createElement("section")
     const h2 = document.createElement("h2")
     const table = document.createElement("table")
     const tbody = document.createElement("tbody")
-    const tr1 = document.createElement("tr")
-    const tr2 = document.createElement("tr")
-    const tr3 = document.createElement("tr")
-    const tr4 = document.createElement("tr")
-    const tr5 = document.createElement("tr")
-    const tr6 = document.createElement("tr")
-    const th1 = document.createElement("th")
-    const th2 = document.createElement("th")
-    const th3 = document.createElement("th")
-    const th4 = document.createElement("th")
-    const th5 = document.createElement("th")
-    const th6 = document.createElement("th")
-    const td1 = document.createElement("td")
-    const td2 = document.createElement("td")
-    const td3 = document.createElement("td")
-    const td4 = document.createElement("td")
-    const td5 = document.createElement("td")
-    const td6 = document.createElement("td")
+    const boutonConfirmation = document.createElement("button")
 
-    nouvelleSection.classList.add("section-confirmation", "flex", "justify_content_center")
-    h2.classList.add("center", "flex_100")
-    table.classList.add("border-black", "flex_100")
-    th1.classList.add("left", "border-black", "w30")
-    th2.classList.add("left", "border-black", "w30")
-    th3.classList.add("left", "border-black", "w30")
-    th4.classList.add("left", "border-black", "w30")
-    th5.classList.add("left", "border-black", "w30")
-    th6.classList.add("left", "border-black", "w30")
-    td1.classList.add("border-black")
-    td2.classList.add("border-black")
-    td3.classList.add("border-black")
-    td4.classList.add("border-black")
-    td5.classList.add("border-black")
-    td6.classList.add("border-black")
+    //tous les th
+    var thEnsemble = new Array(createTh("Nom"), createTh("Prénom"), createTh("Sexe"), createTh("Date de naissance"), createTh("Promo"), createTh("Spécialité"), createTh("Téléphone"), createTh("E-mail"), createTh("Adresse"), createTh("Adresse complémentaire"), createTh("Ville"), createTh("Code postal"));
+
+    nouvelleSection.classList.add("section-confirmation-container", "flex", "jc-center", "m-auto")
+    h2.classList.add("center", "flex-100")
+    table.classList.add("confirmation-table", "border-tb-blanc", "flex-100", "w100", "border-leger-noire", "ombreHover")
+    boutonConfirmation.classList.add("mtb-inter")
+
     h2.innerHTML = "Confirmation des informations"
-    th1.innerHTML = "Nom : "
-    th2.innerHTML = "Prénom : "
-    th3.innerHTML = "Téléphone : "
-    th4.innerHTML = "E-mail : "
-    th5.innerHTML = "Promo : "
-    th6.innerHTML = "Spécialité : "
-    td1.textContent = selectionnerFormulaire.elements.nom.value
-    td2.textContent = selectionnerFormulaire.elements.prenom.value
-    td3.textContent = selectionnerFormulaire.elements.telephone.value
-    td4.textContent = selectionnerFormulaire.elements.email.value
-    td5.textContent = selectionnerFormulaire.elements.promo.value
-    td6.textContent = selectionnerFormulaire.elements.specialite.value
+    boutonConfirmation.innerHTML = "Envoyer"
 
-    tr1.append(th1, td1)
-    tr2.append(th2, td2)
-    tr3.append(th3, td3)
-    tr4.append(th4, td4)
-    tr5.append(th5, td5)
-    tr6.append(th6, td6)
+    boutonConfirmation.setAttribute("onclick", "dialogConfirmation()")
+        // ensemble de tous les names de formulaire
+    var names = selectionnerFormulaire.elements
 
-    tbody.append(tr1, tr2, tr3, tr4, tr5, tr6)
+    // ajouter tous les valeurs de formulaire dans tableau
+    for (var i = 0; i < thEnsemble.length; i++) {
+        //mettre la valeur remplie de formulaire dans td
+        td = createTd()
+        td.innerHTML = names[i].value
+
+        //créer tr avec td et th ainsi mettre tr dans tbody
+        tbody.append(createTr(thEnsemble[i], td))
+    }
+
     table.append(tbody)
-    nouvelleSection.append(h2, table)
+    nouvelleSection.append(h2, table, boutonConfirmation)
 
     article.replaceChild(nouvelleSection, ancienneSection)
+}
+
+//Mettre la date du jour dans input de naissance
+
+function inputDateAujourdhui() {
+    var date = new Date()
+    var mois = (date.getMonth() + 1).toString();
+    var jour = date.getDate().toString();
+    var annee = date.getFullYear();
+    mois = (mois.length < 2) ? ('0' + mois) : mois
+    jour = (jour.length < 2) ? ('0' + jour) : jour
+    var aujourdhui = annee + "-" + mois + "-" + jour
+    var naissance = document.getElementById("naissance")
+
+    naissance.setAttribute("max", aujourdhui)
+}
+
+//créer la balise th
+function createTh(nomColonne) {
+    var th = document.createElement("th")
+    th.classList.add("left", "border-tb-blanc", "border-r-dashed-blanc", "w30")
+    th.innerHTML = nomColonne + " : "
+    return th
+}
+
+//créer la balise td
+function createTd() {
+    var td = document.createElement("td")
+    td.classList.add("border-tb-blanc", "center", "w20")
+    return td
+}
+
+//créer la balise tr
+function createTr(th, td) {
+    var tr = document.createElement("tr")
+    tr.classList.add("confiramtion-table-tr")
+    tr.append(th, td)
+    return tr
+}
+
+//afficher le dialogue de confirmation d'envoi d'inscription
+function dialogConfirmation() {
+    var x
+    var dialogConfirmation = confirm("Confirmez-vous l'envoi des informations d'inscription")
+    if (dialogConfirmation == true) {
+        confirm("Félicitations, vous vous êtes inscrit avec succès !\nNous vous contacterons dans le meillieur délais!")
+    }
+    document.getElementById("demo").innerHTML = x
 }

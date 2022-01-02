@@ -44,15 +44,25 @@
         <!-- formulaire d'Inscription -->
         <article class="form-inscription-container flex direction-column a-center border-leger-noire ombreHover pad-05r">
             <h2 class="center  w100">Inscription</h2>
-            <form class="flex jc-around a-center m-auto form-inscription " name="infoInscription" onsubmit="return false" method="post" action="#">
-                <input id="nom" class="pad-05r mb-1r form-inscription-element " name="nom" type="text" placeholder="* Nom " required>
-                <input id="prenom" class="pad-05r mb-1r form-inscription-element" name="prenom" type="text" placeholder="* Prénom " required>
-                <select class="flex pad-05r mb-1r form-inscription-element" name="sexe" id="sexe">
+            <section>
+                <form class="flex jc-around a-center m-auto form-inscription " name="infoInscription" onsubmit="return false" method="post" action="#">
+                    <!-- nom -->
+                    <input id="nom" class="pad-05r mb-1r form-inscription-element " name="nom" type="text" placeholder="* Nom " required>
+                    <!-- prénom -->
+                    <input id="prenom" class="pad-05r mb-1r form-inscription-element" name="prenom" type="text" placeholder="* Prénom " required>
+                    <!-- sexe -->
+                    <select class="pad-05r mb-1r form-inscription-element" name="sexe" id="sexe">
                         <option value="">Sexe</option>
                         <option value="homme">Homme</option>
                         <option value="femme">Femme</option>
                     </select>
-                <select class="flex pad-05r mb-1r form-inscription-element w100" name="promo" id="promo">
+                    <!-- date de naissance -->
+                    <div class="flex jc-between pad-05r mb-1r form-inscription-element">
+                        <label for="naissance">* Date de Naissance : </label>
+                        <input id="naissance" class="acct-i acct-w42_5" name="naissance" type="date" max="" required>
+                    </div>
+                    <!-- promo -->
+                    <select class="pad-05r mb-1r form-inscription-element" name="promo" id="promo">
                         <option value="">Promo</option>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
@@ -61,18 +71,43 @@
                         <option value="2026">2026</option>
                         <option value="2026">2027</option>
                     </select>
-                <input id="telephone" class="pad-05r mb-1r form-inscription-element" name="telephone" type="tel" placeholder="* Tél " pattern="[0-9]{14}" required>
-                <input id="email" class="pad-05r mb-1r form-inscription-element" name="email" type="email" placeholder="* E-mail " pattern="[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,5}* " required>
-                <input id="specialite" class="pad-05r mb-1r form-inscription-element" name="specialite" type="text" placeholder="* Spécialité " required>
-                <div class="center flex-100">
-                    <button id="boutonEnvoyer" type="submit" onclick="afficherInformationSaisie()">Envoyer</button>
-                </div>
-            </form>
-        </article>
-        <article class="confirmation w400px m-auto">
-            <section class="section-confirmation">
+                    <!-- spécialité -->
+                    <input id="specialite" class="pad-05r mb-1r form-inscription-element" name="specialite" type="text" placeholder="* Spécialité " required>
+                    <!-- numéro de téléphone -->
+                    <input id="telephone" class="pad-05r mb-1r form-inscription-element" name="telephone" type="tel" placeholder="* Tél(ex: 0612345678)" pattern="[0-9]{10}" required title="le numéro de téléphone est un numéro à dix chiffres">
+                    <!-- email -->
+                    <input id="email" class="pad-05r mb-1r form-inscription-element" name="email" type="email" placeholder="* E-mail(ex: ****@efrei.net) " pattern=".+@efrei.net" required title="L'e-mail doit se terminer par @efrei.net">
+                    <!-- code postal -->
+                    <input id="code-postal" class="pad-05r mb-1r form-inscription-element" name="code-postal" type="text" placeholder=" Code postal " pattern="[0-9]{6}" value="" title="le code postal est un numéro à six chiffres">
+                    <!-- adresse -->
+                    <input id="adresse" class="pad-05r mb-1r form-inscription-element" name="adresse" type="text" placeholder=" Adresse ">
+                    <!-- adresse complémentaire -->
+                    <input id="adresse-comp" class="pad-05r mb-1r form-inscription-element" name="adresse-comp" type="text" placeholder=" Adresse complémentaire ">
+                    <!-- ville -->
+                    <input id="ville" class="pad-05r mb-1r form-inscription-element" name="ville" type="text" placeholder=" Ville ">
+                    <!-- règle de l'association -->
+                    <div class="flex jc-between a-center pad-05r mb-1r form-inscription-element">
+                        <input id="regle" name="regle" type="checkbox" required>
+                        <label for="regle">* J'accepte les règles de l'associaiton ZENefrei </label>
+                    </div>
+
+                    <!-- bouton confirmer -->
+                    <div class="center flex-100">
+                        <button type="submit" onclick="afficherTableauConfirmation()">Confirmer</button>
+                    </div>
+
+                </form>
             </section>
         </article>
+
+        <!-- table de confirmation -->
+        <article class="confirmation m-auto">
+            <section class="section-confirmation-container flex jc-center m-auto">
+
+            </section>
+
+        </article>
+        <p id="demo"></p>
     </main>
     <mon-footer></mon-footer>
 </body>
@@ -80,6 +115,7 @@
 <script>
     changerNav()
     ajouterCssMenuNavigation()
+    inputDateAujourdhui()
 </script>
 
 </html>
