@@ -11,10 +11,10 @@
 
 @keyframes changerBackground {
     0% {
-        background: url(../img/contact/background_formulaire.jpg);
+        background: url(../img/contact/background_formulaire_tres_petit.jpg);
     }
     100% {
-        background: url(../img/contact/background_formulaire2.jpg);
+        background: url(../img/contact/background_formulaire2_tres_petit.jpg);
     }
 }
 
@@ -52,12 +52,31 @@
 
 /* Écran petit */
 
-@media(min-width: 768px) {}
+@media(min-width: 768px) {
+    /* formulaire */
+    @keyframes changerBackground {
+        0% {
+            background: url(../img/contact/background_formulaire_petit.jpg);
+        }
+        100% {
+            background: url(../img/contact/background_formulaire2_petit.jpg);
+        }
+    }
+}
 
 
 /* Écran moyen */
 
 @media(min-width: 992px) {
+    /* formulaire */
+    @keyframes changerBackground {
+        0% {
+            background: url(../img/contact/background_formulaire_moyen.jpg);
+        }
+        100% {
+            background: url(../img/contact/background_formulaire2_moyen.jpg);
+        }
+    }
     /* contenu */
     #contenu {
         width: 30rem;
@@ -71,4 +90,14 @@
 
 /* Écran grand */
 
-@media(min-width: 1200px) {}
+@media(min-width: 1200px) {
+    /* formulaire */
+    @keyframes changerBackground {
+        0% {
+            background: url(../img/contact/background_formulaire_grand.jpg);
+        }
+        100% {
+            background: url(../img/contact/background_formulaire2_grand.jpg);
+        }
+    }
+}
