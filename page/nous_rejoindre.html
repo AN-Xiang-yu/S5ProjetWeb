@@ -42,9 +42,9 @@
         </article>
 
         <!-- formulaire d'Inscription -->
-        <article class="form-inscription-container flex direction-column a-center border-leger-noire ombreHover pad-05r">
-            <h2 class="center  w100">Inscription</h2>
+        <article class="form-inscription-container border-ra-10 border-leger-noire ombreHover pad-05r">
             <section>
+                <h2 class="center w100">Inscription</h2>
                 <form class="flex jc-around a-center m-auto form-inscription " name="infoInscription" onsubmit="return false" method="post" action="#">
                     <!-- nom -->
                     <input id="nom" class="pad-05r mb-1r form-inscription-element " name="nom" type="text" placeholder="* Nom " required>
@@ -86,16 +86,15 @@
                     <!-- ville -->
                     <input id="ville" class="pad-05r mb-1r form-inscription-element" name="ville" type="text" placeholder=" Ville ">
                     <!-- règle de l'association -->
-                    <div class="flex jc-between a-center pad-05r mb-1r form-inscription-element">
+                    <div class="a-center pad-05r mb-1r form-inscription-element">
                         <input id="regle" name="regle" type="checkbox" required>
                         <label for="regle">* J'accepte les règles de l'associaiton ZENefrei </label>
                     </div>
 
                     <!-- bouton confirmer -->
                     <div class="center flex-100">
-                        <button type="submit" onclick="afficherTableauConfirmation()">Confirmer</button>
+                        <button class="border-ra-5" type="submit" onclick="afficherTableauConfirmation()">Confirmer</button>
                     </div>
-
                 </form>
             </section>
         </article>

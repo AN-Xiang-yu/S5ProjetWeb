@@ -26,16 +26,16 @@
             <h1 class="center flex-60">Contact</h1>
         </div>
 
-        <article>
-            <h2 class="center">Envoyer nous un message</h2>
+        <article class="form-contact-container border-ra-10 border-leger-noire ombreHover pad-05r">
             <section>
+                <h2 class="center">Envoyer nous un message</h2>
                 <form class="flex a-center jc-center" method="get">
                     <div class="flex-80 center">
                         <label class="flex-80" for="email">
                             Votre adresse e-mail : 
                         </label>
                         <br>
-                        <input type="email" name="email" id="email">
+                        <input id="email" class="pad-05r mb-1r form-inscription-element" name="email" type="email" placeholder="* E-mail(ex: ****@efrei.net) " pattern=".+@efrei.net" required title="L'e-mail doit se terminer par @efrei.net">
                     </div>
                     <br>
                     <div class="flex-80 center">
@@ -43,26 +43,25 @@
                             Sujet:
                         </label>
                         <br>
-                        <input type="text" name="sujet" id="sujet">
+                        <input id="sujet" class="pad-05r mb-1r" name="sujet" type="text">
                     </div>
                     <br>
                     <div class="flex-80 center">
                         <label for="contenu">
-                            Contenu
+                            Contenu:
                         </label>
                         <br>
-                        <textarea rows='10' cols='30' name="contenu" id="contenu"></textarea>
+                        <textarea id="contenu" name="contenu" rows='10' cols='30'></textarea>
                     </div>
                     <br>
                     <div class="flex-80 center ">
-                        <button type="submit">Envoyer</button>
-                        <button type="reset">Supprimer</button>
+                        <button class="contact-button-envoyer border-ra-5" type="submit">Envoyer</button>
+                        <button class="border-ra-5" type="reset">Supprimer</button>
                     </div>
-
                 </form>
             </section>
         </article>
-        <button>sss</button>
+
     </main>
     <mon-footer></mon-footer>
     <script>

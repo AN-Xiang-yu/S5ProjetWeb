@@ -27,7 +27,7 @@ function afficherTableauConfirmation() {
     nouvelleSection.classList.add("section-confirmation-container", "flex", "jc-center", "m-auto")
     h2.classList.add("center", "flex-100")
     table.classList.add("confirmation-table", "border-tb-blanc", "flex-100", "w100", "border-leger-noire", "ombreHover")
-    boutonConfirmation.classList.add("mtb-inter")
+    boutonConfirmation.classList.add("mtb-inter", "border-ra-5")
 
     h2.innerHTML = "Confirmation des informations"
     boutonConfirmation.innerHTML = "Envoyer"

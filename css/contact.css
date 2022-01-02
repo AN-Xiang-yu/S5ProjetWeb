@@ -1,3 +1,16 @@
 .container-titre-page {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/contact/contact.jpg);
 }
+
+.form-contact-container {
+    animation: gradientChange 8s infinite alternate;
+}
+
+@keyframes gradientChange {
+    0% {
+        background: url(../img/contact/background_formulaire.jpg);
+    }
+    100% {
+        background: url(../img/contact/background_formulaire2.jpg);
+    }
+}
