@@ -2,11 +2,14 @@
     background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/contact/contact.jpg);
 }
 
+
+/* formulaire */
+
 .form-contact-container {
-    animation: gradientChange 8s infinite alternate;
+    animation: changerBackground 8s infinite alternate;
 }
 
-@keyframes gradientChange {
+@keyframes changerBackground {
     0% {
         background: url(../img/contact/background_formulaire.jpg);
     }
@@ -14,3 +17,58 @@
         background: url(../img/contact/background_formulaire2.jpg);
     }
 }
+
+
+/* contenu */
+
+#contenu {
+    width: 12.5rem;
+    height: 10rem;
+}
+
+
+/* bouton container */
+
+.form-contact-bouton-container {
+    width: 100%;
+}
+
+
+/* Écran très petit */
+
+@media(min-width: 576px) {
+    /* sujet, email */
+    #sujet,
+    #email {
+        width: 15rem;
+    }
+    /* contenu */
+    #contenu {
+        width: 25rem;
+        height: 15rem;
+    }
+}
+
+
+/* Écran petit */
+
+@media(min-width: 768px) {}
+
+
+/* Écran moyen */
+
+@media(min-width: 992px) {
+    /* contenu */
+    #contenu {
+        width: 30rem;
+        height: 15rem;
+    }
+    .form-contact-bouton-container {
+        width: calc(0.8*992px);
+    }
+}
+
+
+/* Écran grand */
+
+@media(min-width: 1200px) {}

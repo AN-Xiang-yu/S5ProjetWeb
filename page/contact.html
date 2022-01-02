@@ -29,34 +29,25 @@
         <article class="form-contact-container border-ra-10 border-leger-noire ombreHover pad-05r">
             <section>
                 <h2 class="center">Envoyer nous un message</h2>
-                <form class="flex a-center jc-center" method="get">
-                    <div class="flex-80 center">
-                        <label class="flex-80" for="email">
-                            Votre adresse e-mail : 
-                        </label>
-                        <br>
-                        <input id="email" class="pad-05r mb-1r form-inscription-element" name="email" type="email" placeholder="* E-mail(ex: ****@efrei.net) " pattern=".+@efrei.net" required title="L'e-mail doit se terminer par @efrei.net">
+                <form class="flex direction-column a-center" method="get">
+                    <div class="center flex direction-column a-center">
+                        <label for="email"> Votre adresse e-mail : </label>
+                        <input id="email" class="pad-05r mb-1r" name="email" type="email" placeholder="* E-mail(ex: ****@efrei.net) " pattern=".+@efrei.net" required title="L'e-mail doit se terminer par @efrei.net">
                     </div>
                     <br>
-                    <div class="flex-80 center">
-                        <label for="sujet">
-                            Sujet:
-                        </label>
-                        <br>
-                        <input id="sujet" class="pad-05r mb-1r" name="sujet" type="text">
+                    <div class="center flex direction-column a-center">
+                        <label for="sujet"> Sujet: </label>
+                        <input id="sujet" class="pad-05r mb-1r" name="sujet" type="text" placeholder="* Sujet ">
                     </div>
                     <br>
-                    <div class="flex-80 center">
-                        <label for="contenu">
-                            Contenu:
-                        </label>
-                        <br>
-                        <textarea id="contenu" name="contenu" rows='10' cols='30'></textarea>
+                    <div class="center flex direction-column a-center">
+                        <label for="contenu"> Contenu: </label>
+                        <textarea id="contenu" class="mb-1r " name="contenu " rows='10' cols='30'></textarea>
                     </div>
                     <br>
-                    <div class="flex-80 center ">
-                        <button class="contact-button-envoyer border-ra-5" type="submit">Envoyer</button>
-                        <button class="border-ra-5" type="reset">Supprimer</button>
+                    <div class="center flex jc-around form-contact-bouton-container">
+                        <button class="mb-1r border-ra-5 " type="submit ">Envoyer</button>
+                        <button class="mb-1r border-ra-5 " type="reset ">Supprimer</button>
                     </div>
                 </form>
             </section>
@@ -79,7 +70,7 @@
     </script>
 </body>
 
-<script type="text/javascript" src="../js/commun.js"></script>
+<script type="text/javascript " src="../js/commun.js "></script>
 <script>
     changerNav()
     ajouterCssMenuNavigation()
