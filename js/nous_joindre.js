@@ -95,7 +95,7 @@ function dialogConfirmation() {
     var x
     var dialogConfirmation = confirm("Confirmez-vous l'envoi des informations d'inscription")
     if (dialogConfirmation == true) {
-        confirm("Félicitations, vous vous êtes inscrit avec succès !\nNous vous contacterons dans le meillieur délais!")
+        confirm("Félicitations, vous vous êtes inscrit avec succès !\nNous vous contacterons dans les meilleurs délais!")
     }
     document.getElementById("demo").innerHTML = x
 }

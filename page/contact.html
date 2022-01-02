@@ -22,10 +22,11 @@
 <body>
     <mon-header></mon-header>
     <main>
+        <!-- titre de page -->
         <div class="container-titre-page w100 flex a-center">
             <h1 class="center flex-60">Contact</h1>
         </div>
-
+        <!-- formulaire de contact -->
         <article class="form-contact-container border-ra-10 border-leger-noire ombreHover pad-05r">
             <section>
                 <h2 class="center">Envoyer nous un message</h2>
@@ -53,21 +54,71 @@
             </section>
         </article>
 
+        <!-- contact -->
+        <article class="pad-05r flex a-center jc-around">
+            <!-- réseaux sociaux -->
+            <section class="contact-container reseau-social-container border-ra-10 border-leger-noire ombreHover flex direction-column a-center">
+                <div class="flex jc-center">
+                    <h3 class="flex-100 center">S'abonner à nos réseaux sociaux</h3>
+                    <p class="flex-100 center">Restez en lien avec nous sur réseaux sociaux</p>
+                </div>
+                <div class="flex jc-between a-center reseau-social-logo-container">
+                    <div class="flex-15">
+                        <a class="reseau-social-logo-a" href="">
+                            <img class="w100" src="../img/contact/facebook.png" alt="facebook">
+                        </a>
+                    </div>
+                    <div class="flex-15">
+                        <a class="reseau-social-logo-a" href="">
+                            <img class="w100" src="../img/contact/instragram.png" alt="instragram">
+                        </a>
+                    </div>
+                    <div class="flex-15">
+                        <a class="reseau-social-logo-a" href="">
+                            <img class="w100" src="../img/contact/linkdin.png" alt="linkdin">
+                        </a>
+                    </div>
+                    <div class="flex-15">
+                        <a class="reseau-social-logo-a" href="">
+                            <img class="w100" src="../img/contact/twitter.png" alt="twitter">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- téléphone, e-mail et adresse -->
+            <section class="contact-container t-e-a-container border-ra-10 border-leger-noire ombreHover">
+                <!-- téléphone -->
+                <div class="flex jc-between">
+                    <div class="flex-10">
+                        <img class="w100" src="../img/contact/tel.png" alt="numéro de téléphone">
+                    </div>
+                    <p class="flex-80">
+                        <a class="lien-dehors-a" href="tel:+33612345678">+33 6 12 34 56 78</a>
+                    </p>
+                </div>
+                <!-- email -->
+                <div class="flex jc-between">
+                    <div class="flex-10">
+                        <img class="w100" src="../img/contact/email.png" alt="adresse email">
+                    </div>
+                    <p class="flex-80">
+                        <a class="lien-dehors-a" href="Mailto:contact@zenefrei.fr?Subject=Bonjour&Body=Bonjour">contact@zenefrei.fr</a>
+                    </p>
+                </div>
+                <!-- adresse -->
+                <div class="flex jc-between">
+                    <div class="flex-10">
+                        <img class="w100" src="../img/contact/adresse.png" alt="adresse">
+                    </div>
+                    <p class="flex-80">
+                        30-32 Av. de la République, 94800 Villejuif
+                    </p>
+                </div>
+            </section>
+        </article>
     </main>
     <mon-footer></mon-footer>
-    <script>
-        var btn = document.querySelector('button');
-
-        function random(number) {
-            return Math.floor(Math.random() * (number + 1));
-        }
-
-        btn.onclick = function() {
-            var rndCol = 'rgb(' + random(255) + ',' +
-                random(255) + ', ' + random(255) + ')';
-            document.body.style.backgroundColor = rndCol;
-        }
-    </script>
 </body>
 
 <script type="text/javascript " src="../js/commun.js "></script>

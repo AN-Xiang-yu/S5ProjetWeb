@@ -10,6 +10,7 @@
     --blanc-gris: #fff;
     --leger-noire: #eaeaea;
     --demi-noire: rgba(0, 0, 0, 0.5);
+    --ombre: #666666;
     /* inter ligne */
     --inter-ligne: 2rem;
 }
@@ -110,14 +111,10 @@ article {
     margin: var(--inter-ligne) auto;
 }
 
-
-/* fixer footer en bas */
-
-
-/* footer {
-    position: fixed;
-    bottom: 0;
-} */
+section {
+    margin: 1rem;
+    padding: 2rem;
+}
 
 
 /* Pour chaque container de h1 de page */
@@ -542,13 +539,18 @@ button:hover::before {
     cursor: zoom-in;
 }
 
-.ombreHover:hover {
-    -webkit-box-shadow: 0 0 10px #666666;
-    box-shadow: 0 0 10px #666666;
+.ombreHover {
+    -webkit-box-shadow: 0 0 5px var(--ombre);
+    box-shadow: 0 0 5px var(--ombre);
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+}
+
+.ombreHover:hover {
+    -webkit-box-shadow: 0 0 10px var(--ombre);
+    box-shadow: 0 0 10px var(--ombre);
 }
 
 
@@ -562,12 +564,14 @@ button:hover::before {
     margin: var(--inter-ligne) 0;
 }
 
+.lien-dehors-a,
 .vignette-a,
 .vignette-a:focus,
 .vignette-a:hover {
     color: blue;
 }
 
+.lien-dehors-a,
 .vignette-a:focus,
 .vignette-a:hover {
     text-decoration: underline;
