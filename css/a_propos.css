@@ -1,9 +1,3 @@
-.container-image-a-propos {
-    width: 100%;
-    height: 100px;
-    background-image: url(../img/a_propos/a_propos.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: -0 -100px;
-    opacity: .5;
+.container-titre-page {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/a_propos/a_propos.jpg);
 }

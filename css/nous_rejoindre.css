@@ -1,0 +1,59 @@
+.container-titre-page {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/nous_rejoindre.jpg);
+}
+
+.form-inscription-container {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_tres_petit.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+.form-inscription-element {
+    flex: 0 0 80%;
+}
+
+
+/* Écran très petit */
+
+@media(min-width: 576px) {
+    .form-inscription-container {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_petit.jpg);
+    }
+    .form-inscription {
+        width: calc(0.8*576px);
+    }
+    .form-inscription-element {
+        flex: 0 0 40%;
+    }
+}
+
+
+/* Écran petit */
+
+@media(min-width: 768px) {
+    .form-inscription-container {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_moyen.jpg);
+    }
+    .form-inscription {
+        width: calc(0.8*768px);
+    }
+}
+
+
+/* Écran moyen */
+
+@media(min-width: 992px) {
+    .form-inscription-container {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/nous_rejoindre/background_formulaire_grand.jpg);
+    }
+}
+
+
+/* Écran grand */
+
+@media(min-width: 1200px) {
+    .form-inscription {
+        width: calc(0.8*1200px);
+    }
+}

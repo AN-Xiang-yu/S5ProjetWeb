@@ -3,45 +3,69 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Nous rejoindre</title>
-    <link rel="stylesheet" href="../css/commun.css">
-    <script src="../js/commun.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of our site" />
+    <meta name="robots" content="Keywords of our site (5 words, Separated by commas)" />
 
+    <!-- icône du site dans l'onglet  -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+
+    <!-- titre de page -->
+    <title>Nous rejoindre</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/commun.css">
+    <link rel="stylesheet" href="../css/nous_rejoindre.css">
+
+    <!-- javascript -->
+    <script src="../js/commun.js"></script>
+    <script type="text/javascript" src="../js/nous_joindre.js"></script>
 </head>
 
 <body>
     <mon-header></mon-header>
     <main>
-        <h1 class="center">Nous rejoindre</h1>
-        <article class="flex">
-            <h2 class="center flex-100">Inscription</h2>
-            <form method="post" action="#" class="flex align-center justify-content-center w300px m-auto" name="infoInscription" onsubmit="return false">
-                <div class="flex-100 center flex justify-content-between pad-05r">
-                    <label for="nom">Nom : </label>
-                    <input type="text" name="nom" id="nom" required>
-                </div>
-                <div class="flex-100 center flex justify-content-between pad-05r">
-                    <label for="prenom">Prénom : </label>
-                    <input type="text" name="prenom" id="prenom" required>
-                </div>
-                <div class="flex-100 center flex justify-content-between pad-05r">
-                    <label for="prenom">Téléphone : </label>
-                    <input type="tel" name="telephone" id="telephone" required>
-                </div>
-                <div class="flex-100 center flex justify-content-between pad-05r">
-                    <label for="email">E-mail : </label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <div class="flex-100 center flex justify-content-between pad-05r">
-                    <label for="promo">Promo : </label>
-                    <input type="text" name="promo" id="promo" required>
-                </div>
-                <div class="flex-100 center flex justify-content-between pad-05r">
-                    <label for="specialite">Spécialité : </label>
-                    <input type="text" name="specialite" id="specialite" required>
-                </div>
-                <div class="center">
-                    <button type="submit" id="boutonEnvoyer" onclick="afficherInformationSaisie()">Envoyer</button>
+        <div class="container-titre-page w100 flex a-center">
+            <h1 class="center flex-60">Nous rejoindre</h1>
+        </div>
+
+        <article>
+            <section>
+                <h2 class="center">Rejoignez-nous !</h2>
+                <p class="justify">
+                    L'association de méditation ZENefrei permettra aux élèves de découvrir leur monde intérieur et d'amener leur esprit à un plus grand équilibre. Les compétences techniques d'un ingénieur sont bien sûr essentielles, mais son ouverture aux autres cultures
+                    et son équilibre intérieur sont tout aussi importants. Veiller à ce que ces deux derniers points soient développés chez nos élèves est la raison d'être de ZENefrei et justifie l'intervention de notre maître de méditation avec 20 ans
+                    d'expérience. Rejoignez-nous et découvrez ensemble le monde de la méditation.
+                </p>
+            </section>
+        </article>
+
+        <!-- formulaire d'Inscription -->
+        <article class="form-inscription-container flex direction-column a-center border-leger-noire ombreHover pad-05r">
+            <h2 class="center  w100">Inscription</h2>
+            <form class="flex jc-around a-center m-auto form-inscription " name="infoInscription" onsubmit="return false" method="post" action="#">
+                <input id="nom" class="pad-05r mb-1r form-inscription-element " name="nom" type="text" placeholder="* Nom " required>
+                <input id="prenom" class="pad-05r mb-1r form-inscription-element" name="prenom" type="text" placeholder="* Prénom " required>
+                <select class="flex pad-05r mb-1r form-inscription-element" name="sexe" id="sexe">
+                        <option value="">Sexe</option>
+                        <option value="homme">Homme</option>
+                        <option value="femme">Femme</option>
+                    </select>
+                <select class="flex pad-05r mb-1r form-inscription-element w100" name="promo" id="promo">
+                        <option value="">Promo</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2026">2027</option>
+                    </select>
+                <input id="telephone" class="pad-05r mb-1r form-inscription-element" name="telephone" type="tel" placeholder="* Tél " pattern="[0-9]{14}" required>
+                <input id="email" class="pad-05r mb-1r form-inscription-element" name="email" type="email" placeholder="* E-mail " pattern="[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,5}* " required>
+                <input id="specialite" class="pad-05r mb-1r form-inscription-element" name="specialite" type="text" placeholder="* Spécialité " required>
+                <div class="center flex-100">
+                    <button id="boutonEnvoyer" type="submit" onclick="afficherInformationSaisie()">Envoyer</button>
                 </div>
             </form>
         </article>
@@ -52,7 +76,7 @@
     </main>
     <mon-footer></mon-footer>
 </body>
-<script type="text/javascript" src="../js/nous_joindre.js"></script>
+
 <script>
     changerNav()
     ajouterCssMenuNavigation()

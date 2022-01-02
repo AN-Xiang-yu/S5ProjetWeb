@@ -3,21 +3,32 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of our site" />
+    <meta name="robots" content="Keywords of our site (5 words, Separated by commas)" />
+
+    <!-- icône du site dans l'onglet  -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+
+    <!-- titre de page -->
     <title>À propos</title>
+
+    <!-- css -->
     <link rel="stylesheet" href="../css/commun.css">
     <link rel="stylesheet" href="../css/a_propos.css">
+
+    <!-- javascript -->
+    <script type="text/javascript" src="../js/nous_joindre.js"></script>
+    <script type="text/javascript" src="../js/commun.js"></script>
 
 </head>
 
 <body>
     <mon-header></mon-header>
-    <main>
-        <div class="container-titre-page w100">
-            <h1 class="center">À propos</h1>
-            <div class="container-image-a-propos">
-                <img src="" alt="">
-
-            </div>
+    <main class="a-propos">
+        <div class="container-titre-page w100 flex a-center">
+            <h1 class="center flex-60">À propos</h1>
         </div>
 
         <!-- But de l'association -->
@@ -47,49 +58,49 @@
         <!-- Membres de bureau -->
         <article>
             <h2 class="center">Bureau</h2>
-            <section class="flex justify-content-around align-center">
+            <section class="flex jc-around a-center">
                 <div class="flex-30 center">
-                    <img class="align-center w100" src="../img/An Xiangyu.jpeg" alt="">
+                    <img class="a-center w100" src="../img/An Xiangyu.jpeg" alt="">
                     <p>Xiangyu AN</p>
                     <p>Président</p>
                 </div>
                 <div class="flex-30 center">
-                    <img class="align-center w100" src="../img/Victorien.jpeg" alt="">
+                    <img class="a-center w100" src="../img/Victorien.jpeg" alt="">
                     <p>GBAGUIDI Victorien</p>
                     <p>Vice-président</p>
                 </div>
                 <div class="flex-30 center">
-                    <img class="align-center w100" src="../img/stanne.jpeg" alt="">
+                    <img class="a-center w100" src="../img/stanne.jpeg" alt="">
                     <p>RODRIGUEZ Alysson</p>
                     <p>Secrétaire</p>
                 </div>
                 <div class="flex-30 center">
-                    <img class="align-center w100" src="../img/stanne.jpeg" alt="">
+                    <img class="a-center w100" src="../img/stanne.jpeg" alt="">
                     <p>YE Fangyuan Lisa</p>
                     <p>Trésorie</p>
                 </div>
                 <div class="flex-30 center">
-                    <img class="align-center w100" src="../img/precillia.jpeg" alt="">
+                    <img class="a-center w100" src="../img/precillia.jpeg" alt="">
                     <p>AIT-OUARAB Precillia</p>
                     <p>Pôle Communication</p>
                 </div>
                 <div class="flex-30 center">
-                    <img class="align-center w100" src="../img/stanne.jpeg" alt="">
+                    <img class="a-center w100" src="../img/stanne.jpeg" alt="">
                     <p>PREMANATH Stalennath</p>
                     <p>Responsable de service</p>
                 </div>
 
             </section>
         </article>
-        <article class="flex justify-content-around">
+        <article class="flex jc-around">
             <div class="flex-40">
-                <div class="flex justify-content-center">
+                <div class="flex jc-center">
                     <p class="flex-100 center">S'abonner à nos réseau social</p>
                     <p class="flex-100 center">Restez en lien avec nous sur notre réseau social</p>
                 </div>
             </div>
             <div class="flex-40">
-                <div class="flex justify-content-center">
+                <div class="flex jc-center">
                     <button onclick="location.href='contact.html'">Contactez-nous</button>
                 </div>
             </div>
@@ -98,8 +109,7 @@
     <mon-footer></mon-footer>
 
 </body>
-<script type="text/javascript" src="../js/nous_joindre.js"></script>
-<script type="text/javascript" src="../js/commun.js"></script>
+
 <script>
     ajouterCssMenuNavigation()
     changerNav()

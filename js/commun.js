@@ -9,9 +9,9 @@ class MonHeader extends HTMLElement {
         this.innerHTML = `
          <header class="w100 backgroud-orange-saumon">
             <nav>
-                <ul id="barre-menu" class="flex direction-column align-center justify-content-start flex-70 ">
+                <ul id="barre-menu" class="flex direction-column a-center jc-start flex-70 ">
                     <li class="flex-10">
-                        <div class="flex justify-content-center">
+                        <div class="flex jc-center">
                             <a class="ajouter_chemin" href="accueil.html">
                                 <!-- logo sur ordinateur -->
                                 <img class="hight75 ajouter_chemin_image mt-025r" src="../img/logo-phone.png" alt="logo d'ordinateur">
@@ -29,7 +29,7 @@ class MonHeader extends HTMLElement {
                     </li>
                     </li>
                     <li id="produit" class="flex-10 center">
-                        <a class="ajouter_chemin" href="../page/produit/produit.html">Produit</a>
+                        <a class="ajouter_chemin" href="produit.html">Produit</a>
                     </li>
                     <li id="a_propos" class="flex-10 center">
                         <a class="ajouter_chemin" href="a_propos.html">À propos</a>
@@ -53,7 +53,7 @@ class MonFooter extends HTMLElement {
         this.innerHTML = `
         <footer class="backgroud-orange-saumon w100">
             <p class="center flex-100">Copyright©2013-2021 BEM - All Rights Reserved.</p>
-            <p class="center flex-100 flex justify-content-between"><span class="flex-30"></span><span class="flex-30">zenefrei.fr</span> <span class="flex-30"> <span id="dateheure" class="ordi-affiche"></span> </span></p>
+            <p class="center flex-100 flex jc-between"><span class="flex-30"></span><span class="flex-30">zenefrei.fr</span> <span class="flex-30"> <span id="dateheure" class="ordi-affiche"></span> </span></p>
         </footer>
         `
     }
@@ -80,7 +80,6 @@ function ajouterChemin() {
     var nomPage = recupererNomPage()
 
     switch (nomPage) {
-        case "produit":
         case "activite":
         case "activite-evenement":
             var aChange = document.getElementsByClassName("ajouter_chemin")
@@ -113,7 +112,7 @@ function changerNav() {
         barreMenu.setAttribute("class", classModifie)
     } else {
         barreMenu.classList.add("direction-column")
-        nav.classList.add("flex", "justify-content-around", "align-center")
+        nav.classList.add("flex", "jc-around", "a-center")
     }
 }
 
@@ -170,7 +169,7 @@ function afficherImage(_this) {
         var vraieLargeur = this.width;
         var vraieHauteur = this.height;
         var largeurImg, hauteurImg;
-        var scale = 0.6;
+        var scale = 0.4;
 
         largeurImg = scale * largeurPage
         hauteurImg = largeurImg / vraieLargeur * vraieHauteur

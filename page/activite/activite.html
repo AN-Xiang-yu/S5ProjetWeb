@@ -3,8 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of our site" />
+    <meta name="robots" content="Keywords of our site (5 words, Separated by commas)" />
+
+    <!-- icône du site dans l'onglet  -->
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+    <!-- titre de page -->
+    <title>Activité</title>
+
+    <!-- css -->
     <link rel="stylesheet" href="../../css/commun.css">
+    <link rel="stylesheet" href="../../css/activite/activite.css">
+
+    <!-- javascript -->
+    <script src="../../js/commun.js"></script>
 
     <style>
         .flex-container>div {
@@ -25,26 +40,32 @@
 
 <body>
     <mon-header></mon-header>
-    <h1>Evenements Passés</h1>
+    <main>
+        <div class="container-titre-page w100 flex a-center">
+            <h1 class="center flex-60">Activité</h1>
+        </div>
 
-    <div class="flex-container justify-content-around direction-column">
-        <div>
-            <img class="w90 left" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
-            <h4>Journée du volontariat</h4>
+        <h2>Evenements Passés</h2>
+
+        <div class="flex-container jc-around direction-column">
+            <div>
+                <img class="w90 left" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
+                <h4>Journée du volontariat</h4>
+            </div>
+            <div>
+                <img class="w90" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
+                <h4>Journée du volontariat</h4>
+            </div>
+            <div>
+                <img class="w90" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
+                <h4>Journée du volontariat</h4>
+            </div>
         </div>
-        <div>
-            <img class="w90" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
-            <h4>Journée du volontariat</h4>
-        </div>
-        <div>
-            <img class="w90" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
-            <h4>Journée du volontariat</h4>
-        </div>
-    </div>
+    </main>
     <mon-footer></mon-footer>
 
 </body>
-<script src="../../js/commun.js"></script>
+
 <script>
     ajouterChemin()
     changerNav()

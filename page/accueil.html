@@ -3,10 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ZENefrei</title>
-    <link rel="stylesheet" href="../css/commun.css">
-    <script src="../js/jquery-2.1.1.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of our site" />
+    <meta name="robots" content="Keywords of our site (5 words, Separated by commas)" />
 
+    <!-- icône du site dans l'onglet  -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+
+    <!-- titre de page -->
+    <title>ZENefrei</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/commun.css">
+
+    <!-- javascript -->
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/commun.js"></script>
 </head>
 
 <body>
@@ -14,35 +27,28 @@
     <main class="background-beige">
         <h1 class="center cache">ZENefrei</h1>
         <div>
-            <img class="w100 img-couche" src="../img/image-accueil.jpeg" alt="">
+            <img class="w100" src="../img/image-accueil.jpeg" alt="">
         </div>
-        <article class="flex justify-content-around">
+        <article class="flex jc-around">
             <div class="flex-40">
-                <div class="flex justify-content-center">
+                <div class="flex jc-center">
                     <p class="flex-100 center">S'abonner à nos réseau social</p>
                     <p class="flex-100 center">Restez en lien avec nous sur notre réseau social</p>
                 </div>
             </div>
             <div class="flex-40">
-                <div class="flex justify-content-center">
+                <div class="flex jc-center">
                     <button onclick="location.href='contact.html'">Contactez-nous</button>
                 </div>
             </div>
         </article>
-        <img class="img-couche" src="../img/coussin.png" alt="">
-        <div id="container-couche-img" class="cache fixed backgroud-demi-noire top0 left0 index-2 hight100 w100 h100 img-roulante-container">
-            <img id="couche-img" class="img-roulante fixed" style="border:5px solid #fff; position:fixed; right:25%; left:25%;" src="" />
-        </div>
     </main>
-
     <mon-footer></mon-footer>
 </body>
-<script type="text/javascript" src="../js/commun.js"></script>
+
 <script>
     changerNav()
     ajouterCssMenuNavigation()
-    mettreImgDansCouche()
-    zoomerImage()
 </script>
 
 </html>

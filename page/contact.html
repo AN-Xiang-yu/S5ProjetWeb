@@ -3,18 +3,33 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of our site" />
+    <meta name="robots" content="Keywords of our site (5 words, Separated by commas)" />
+
+    <!-- icône du site dans l'onglet  -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+
+    <!-- titre de page -->
     <title>Contact</title>
+
+    <!-- css -->
     <link rel="stylesheet" href="../css/commun.css">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 
 <body>
     <mon-header></mon-header>
     <main>
-        <h1 class="center">Contact</h1>
+        <div class="container-titre-page w100 flex a-center">
+            <h1 class="center flex-60">Contact</h1>
+        </div>
+
         <article>
             <h2 class="center">Envoyer nous un message</h2>
             <section>
-                <form class="flex align-center justify-content-center" method="get">
+                <form class="flex a-center jc-center" method="get">
                     <div class="flex-80 center">
                         <label class="flex-80" for="email">
                             Votre adresse e-mail : 
@@ -64,6 +79,7 @@
         }
     </script>
 </body>
+
 <script type="text/javascript" src="../js/commun.js"></script>
 <script>
     changerNav()
