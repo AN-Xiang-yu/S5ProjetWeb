@@ -169,6 +169,7 @@ function mettreImgDansCouche() {
         var _this = $(this);
         afficherImage(_this);
     });
+
 }
 
 //afficher l'image choisie
