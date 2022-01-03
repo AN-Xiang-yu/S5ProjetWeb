@@ -1,9 +1,7 @@
 var tailleGrandEcran = 1200
-
 afficherDate()
 
-
-//création une balise pour 
+//création une balise pour header
 class MonHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -71,6 +69,7 @@ class MonHeader extends HTMLElement {
 
 customElements.define('mon-header', MonHeader)
 
+//création une balise pour footer
 class MonFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -163,29 +162,17 @@ async function afficherDate() {
     }
 }
 
-
-
-function zoomerImage() {
-    const imgRoulanteContainer = document.querySelector(".img-roulante-container");
-    const imgRoulante = document.querySelector(".img-roulante");
-    var wDefaut = 100;
-
-    imgRoulante.style.width = `${wDefaut}%`
-    imgRoulanteContainer.onmouseover = () => {
-        imgRoulante.onmousewheel = (b) => {
-            b.wheelDelta < 0 ? wDefaut-- : wDefaut++;
-            imgRoulante.style.width = `${wDefaut}%`
-        }
-    }
-}
-
+//mettre l'image dans une couche et l'agrandir
 function mettreImgDansCouche() {
     $(".img-couche").click(function() {
+        console.log("sss");
         var _this = $(this);
         afficherImage(_this);
     });
+
 }
 
+//afficher l'image choisie
 function afficherImage(_this) {
 
     var containerCoucheImg = document.querySelector("#container-couche-img")
