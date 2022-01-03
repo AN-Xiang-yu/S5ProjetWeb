@@ -255,10 +255,6 @@ button:hover::before {
     flex-wrap: nowrap;
 }
 
-.reverse {
-    flex-wrap: reverse;
-}
-
 .jc-between {
     justify-content: space-between;
 }
@@ -275,24 +271,12 @@ button:hover::before {
     justify-content: end;
 }
 
-.a-end {
-    align-items: flex-end;
-}
-
 .a-center {
     align-items: center;
 }
 
-.a-stretch {
-    align-items: stretch;
-}
-
 .direction-column {
     flex-direction: column;
-}
-
-.direction-row {
-    flex-direction: row;
 }
 
 .a-self-start {
@@ -305,14 +289,6 @@ button:hover::before {
 
 .a-self-center {
     align-self: center;
-}
-
-.a-self-baseline {
-    align-self: baseline;
-}
-
-.a-self-stretch {
-    align-self: stretch;
 }
 
 .flex-100 {
@@ -361,18 +337,6 @@ button:hover::before {
 
 .flex-5 {
     flex: 0 0 5%
-}
-
-.shrink0 {
-    flex-shrink: 0;
-}
-
-.shrink1 {
-    flex-shrink: 1;
-}
-
-.shrink2 {
-    flex-shrink: 2;
 }
 
 

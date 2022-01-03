@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Description of our site" />
+    <meta name="description" content="Inscription de l'association" />
     <meta name="robots" content="Keywords of our site (5 words, Separated by commas)" />
 
     <!-- icône du site dans l'onglet  -->
@@ -29,7 +29,6 @@
         <div class="container-titre-page w100 flex a-center">
             <h1 class="center flex-60">Nous rejoindre</h1>
         </div>
-
         <article>
             <section>
                 <h2 class="center">Rejoignez-nous !</h2>
@@ -40,7 +39,6 @@
                 </p>
             </section>
         </article>
-
         <!-- formulaire d'Inscription -->
         <article class="form-inscription-container border-ra-10 border-leger-noire ombreHover pad-05r">
             <section>
@@ -59,7 +57,7 @@
                     <!-- date de naissance -->
                     <div class="flex jc-between pad-05r mb-1r form-inscription-element">
                         <label for="naissance">* Date de Naissance : </label>
-                        <input id="naissance" class="acct-i acct-w42_5" name="naissance" type="date" max="" required>
+                        <input id="naissance" class="acct-i acct-w42_5" name="naissance" type="date" required>
                     </div>
                     <!-- promo -->
                     <select class="pad-05r mb-1r form-inscription-element" name="promo" id="promo">
@@ -98,7 +96,6 @@
                 </form>
             </section>
         </article>
-
         <!-- table de confirmation -->
         <article class="confirmation m-auto">
             <section class="section-confirmation-container flex jc-center m-auto">
@@ -106,12 +103,10 @@
         </article>
     </main>
     <mon-footer></mon-footer>
+    <script>
+        ajouterCssMenuNavigation()
+        inputDateAujourdhui()
+    </script>
 </body>
-
-<script>
-    changerNav()
-    ajouterCssMenuNavigation()
-    inputDateAujourdhui()
-</script>
 
 </html>

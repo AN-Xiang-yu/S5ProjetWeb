@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Description of our site" />
+    <meta name="description" content="Page d'accueil" />
     <meta name="robots" content="Keywords of our site (5 words, Separated by commas)" />
 
     <!-- icône du site dans l'onglet  -->
@@ -178,13 +178,16 @@
                 </div>
             </section>
         </article>
+        <!-- Pour cliquer et agrandir les images -->
+        <div id="container-couche-img" class="cache fixed backgroud-demi-noire top0 left0 index-2 hight100 w100 h100 img-roulante-container">
+            <img id="couche-img" class="img-roulante fixed" style="border:5px solid #fff; position:fixed; right:25%; left:25%;" src="../img/produit/cloche_medidation.jpg" alt="Image couche" />
+        </div>
     </main>
     <mon-footer></mon-footer>
+    <script>
+        ajouterCssMenuNavigation()
+        mettreImgDansCouche()
+    </script>
 </body>
-
-<script>
-    changerNav()
-    ajouterCssMenuNavigation()
-</script>
 
 </html>
