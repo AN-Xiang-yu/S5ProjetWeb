@@ -20,7 +20,7 @@ class MonHeader extends HTMLElement {
                         </li>
                         <li class="flex-10 barre-menu-image-navphone-container">
                             <div class="flex jc-center">
-                                <img id="barre-menu-image-nav" class="barre-menu-image ajouter_chemin_image mt-025r cr-pointer" src="../img/nav_phone.png" alt="nav phone" onclick="changerNav()">
+                                <img id="barre-menu-image-nav" class="barre-menu-image ajouter_chemin_image mt-025r cr-pointer" src="../img/nav_phone.png" alt="nav phone" onclick="afficherNavPhone()">
                             </div>
                         </li>
                     </div>
@@ -133,7 +133,7 @@ function ajouterChemin() {
 }
 
 //modifier la façon d'afficher le barre de navigation
-function changerNav() {
+function afficherNavPhone() {
     var barreMenuPageContainer = document.getElementById('barre-menu-page-container')
     var barreMenuPageContainerClass = barreMenuPageContainer.getAttribute("class")
 
