@@ -53,7 +53,13 @@ class MonFooter extends HTMLElement {
         this.innerHTML = `
         <footer class="backgroud-orange-saumon w100">
             <p class="center flex-100">Copyright©2013-2021 BEM - All Rights Reserved.</p>
-            <p class="center flex-100 flex jc-between"><span class="flex-30"></span><span class="flex-30">zenefrei.fr</span> <span class="flex-30"> <span id="dateheure" class="ordi-affiche"></span> </span></p>
+            <p class="center flex-100 flex jc-between">
+                <span class="flex-30"><a class="ajouter_chemin lien-dehors-a" href="a_propos.html">À propos</a></span>
+                <span class="flex-30">zenefrei.fr</span>
+                <span class="flex-30">
+                    <span id="dateheure" class="ordi-affiche"></span>
+                </span>
+            </p>
         </footer>
         `
     }
