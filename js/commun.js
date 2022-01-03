@@ -3,7 +3,7 @@ var tailleEcranSmartphone = 768;
 afficherDate()
 window.addEventListener("resize", changerNav)
 
-
+//création une balise pour 
 class MonHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `

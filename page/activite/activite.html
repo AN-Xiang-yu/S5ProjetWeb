@@ -19,22 +19,11 @@
     <link rel="stylesheet" href="../../css/activite/activite.css">
 
     <!-- javascript -->
+    <script src="../../js/jquery-2.1.1.min.js"></script>
     <script src="../../js/commun.js"></script>
 
     <style>
-        .flex-container>div {
-            width: 100%;
-            text-align: center;
-            margin: 0px;
-            padding: 10px;
-            font-size: 30px;
-            flex-direction: row;
-        }
-        
-        .left {
-            background-image: url("https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg");
-            background-size: cover;
-        }
+
     </style>
 </head>
 
@@ -45,21 +34,193 @@
             <h1 class="center flex-60">Activité</h1>
         </div>
 
-        <h2>Evenements Passés</h2>
+        <!-- activités passées et futures -->
+        <article class="flex direction-column a-center">
+            <!-- activités futures -->
+            <section class="flex a-center jc-center container-vignette">
+                <div class="flex-100 flex jc-center a-center">
+                    <img class="h-fit-content pad-1r" src=" ../../img/titre-icon.png " alt="titre icone ">
+                    <h2 class="center ">Activités futures</h2>
+                    <img class="h-fit-content pad-1r" src="../../img/titre-icon.png " alt="titre icone ">
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">ZEN-Efrei-Chef</a>
+                        </p>
+                        <p>22/03/2022</p>
+                    </div>
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">ZEN-Efrei-Chef</a>
+                        </p>
+                        <p>22/03/2022</p>
+                    </div>
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">ZEN-Efrei-Chef</a>
+                        </p>
+                        <p>22/03/2022</p>
+                    </div>
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">ZEN-Efrei-Chef</a>
+                        </p>
+                        <p>22/03/2022</p>
+                    </div>
+                </div>
+            </section>
+            <!-- activités passées -->
+            <section class="flex a-center jc-center container-vignette ">
+                <div class="flex-100 flex jc-center a-center">
+                    <img class="h-fit-content pad-1r" src=" ../../img/titre-icon.png " alt="titre icone ">
+                    <h2 class="center ">Activités passées</h2>
+                    <img class="h-fit-content pad-1r" src="../../img/titre-icon.png " alt="titre icone ">
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">ZEN-Efrei-Chef</a>
+                        </p>
+                        <p>22/03/2021</p>
+                    </div>
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">ZEN-Efrei-Chef</a>
+                        </p>
+                        <p>22/03/2021</p>
+                    </div>
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">ZEN-Efrei-Chef</a>
+                        </p>
+                        <p>22/03/2021</p>
+                    </div>
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">ZEN-Efrei-Chef</a>
+                        </p>
+                        <p>22/03/2021</p>
+                    </div>
+                </div>
+            </section>
+        </article>
 
-        <div class="flex-container jc-around direction-column">
-            <div>
-                <img class="w90 left" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
-                <h4>Journée du volontariat</h4>
-            </div>
-            <div>
-                <img class="w90" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
-                <h4>Journée du volontariat</h4>
-            </div>
-            <div>
-                <img class="w90" src="https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8d3e8915e9f93313151c4d.jpg" />
-                <h4>Journée du volontariat</h4>
-            </div>
+        <!-- séances -->
+        <article>
+            <!-- Introduction aux séances -->
+            <section class="flex jc-center container-vignette ">
+                <div class="flex-100 flex jc-center a-center">
+                    <img class="h-fit-content pad-1r" src=" ../../img/titre-icon.png " alt="titre icone ">
+                    <h2 class="center ">Introduction des séances</h2>
+                    <img class="h-fit-content pad-1r" src="../../img/titre-icon.png " alt="titre icone ">
+                </div>
+                <div class="vignette flex direction-column a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex direction-column ">
+                        <p class="center ">
+                            <a class="vignette-a cr-pointer ">Séance dans compus avec Maitre</a>
+                        </p>
+                        <p class="center ">1 fois par mois</p>
+                        <div class="flex direction-column ">
+                            <p>10h - 11h: méditer sous le guide de maître</p>
+                            <p>11h - 12h: discussion avec maître et une dégustation de thé</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vignette flex direction-column a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex direction-column ">
+                        <p class="center ">
+                            <a class="vignette-a cr-pointer ">Séance dans compus sans Maitre</a>
+                        </p>
+                        <p class="center ">2 fois par mois</p>
+                        <div class="flex direction-column ">
+                            <p>10h - 10h20: enseignement de méditation</p>
+                            <p>10h20 - 10h50: méditation </p>
+                            <p>10h50 - 11h00: pause </p>
+                            <p>11h00 - 11h30: méditation </p>
+                            <p>11h30 - 12h00: thé et discussion ainsi nettoyage ensemble </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vignette flex direction-column a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex direction-column ">
+                        <p class="center ">
+                            <a class="vignette-a cr-pointer ">Séance dans dojo avec Maitre</a>
+                        </p>
+                        <p class="center ">1 fois par mois</p>
+                        <div class="flex direction-column ">
+                            <p>12h : accueil</p>
+                            <p>12h - 13h : déjeuner</p>
+                            <p>13h - 14h : méditation marchée</p>
+                            <p>14h - 16h : méditation et yoga</p>
+                            <p>16h - 17h : thé et discussion ainsi nettoyage ensemble</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Les 3 dernières séances -->
+            <section class="flex a-center jc-center container-vignette ">
+                <div class="flex-100 flex jc-center a-center">
+                    <img class="h-fit-content pad-1r" src=" ../../img/titre-icon.png " alt="titre icone ">
+                    <h2 class="center ">Les séances passées</h2>
+                    <img class="h-fit-content pad-1r" src="../../img/titre-icon.png " alt="titre icone ">
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">Séance dojo</a>
+                        </p>
+                        <p>01/12/2021</p>
+                    </div>
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">Séance campus</a>
+                        </p>
+                        <p>08/12/2021</p>
+                    </div>
+                </div>
+                <div class="vignette flex jc-center a-center border-leger-noire ombreHover pad-05r ">
+                    <img class="w100 img-couche " src="../../img/activite/activite/affiche.png " alt="affiche ">
+                    <div class="flex a-center direction-column ">
+                        <p>
+                            <a class="vignette-a cr-pointer ">Séance campus</a>
+                        </p>
+                        <p>15/12/2021</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Pour cliquer et agrandir les images -->
+        <div id="container-couche-img " class="cache fixed backgroud-demi-noire top0 left0 index-2 hight100 w100 h100 img-roulante-container ">
+            <img id="couche-img " class="img-roulante fixed " style="border:5px solid #fff; position:fixed; right:25%; left:25%; " src=" " />
         </div>
     </main>
     <mon-footer></mon-footer>
@@ -70,6 +231,7 @@
     ajouterChemin()
     changerNav()
     ajouterCssMenuNavigation()
+    mettreImgDansCouche()
 </script>
 
 </html>

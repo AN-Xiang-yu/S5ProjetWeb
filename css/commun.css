@@ -408,6 +408,10 @@ button:hover::before {
     height: 100%;
 }
 
+.h-fit-content {
+    height: fit-content;
+}
+
 
 /*largeur*/
 
@@ -492,6 +496,10 @@ button:hover::before {
 
 .pad-05r {
     padding: .5rem;
+}
+
+.pad-1r {
+    padding: 1rem;
 }
 
 
