@@ -1,6 +1,6 @@
     //utiliser json pour récupérer les info des membres du bureau
     recupereMembresData = () => {
-        fetch('http://localhost/S5ProjetWeb/data/membres.json')
+        fetch('http://localhost/zenefrei/data/membres.json')
             .then(response => response.json())
             .then(membres => {
                 for (const membre of membres) {
