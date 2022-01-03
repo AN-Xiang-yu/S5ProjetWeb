@@ -1,0 +1,31 @@
+[{
+        "prenom": "Xiangyu",
+        "nom": "AN",
+        "poste": "Président",
+        "photo": "../img/a_propos/xiangyu.jpg"
+    },
+    {
+        "prenom": "Stalennath",
+        "nom": "PREMANATH ",
+        "poste": "Vice Président",
+        "photo": "../img/a_propos/stanne.jpg"
+    },
+    {
+        "prenom": "Alysson",
+        "nom": "RODRIGUEZ ",
+        "poste": "Secrétaire",
+        "photo": "../img/a_propos/alysson.jpg"
+    },
+    {
+        "prenom": "Fangyuan Lisa",
+        "nom": "YE",
+        "poste": "Trésorie",
+        "photo": "../img/a_propos/fangyuan.jpg"
+    },
+    {
+        "prenom": "Precillia",
+        "nom": "AIT-OUARAB",
+        "poste": "Pôle Communication",
+        "photo": "../img/a_propos/precillia.jpg"
+    }
+]
