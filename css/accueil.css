@@ -1,0 +1,45 @@
+/* grande imgage */
+
+.grand-image-container {
+    max-width: 100%;
+    object-fit: cover;
+    height: 60vh;
+    background-image: url(../img/accueil/image_accueil_tres_petit.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+/* Écran très petit */
+
+@media(min-width: 576px) {
+    /* grande imgage */
+    .grand-image-container {
+        background-image: url(../img/accueil/image_accueil_petit.jpg);
+    }
+}
+
+
+/* Écran petit */
+
+@media(min-width: 768px) {}
+
+
+/* Écran moyen */
+
+@media(min-width: 992px) {
+    /* grande imgage */
+    .grand-image-container {
+        background-image: url(../img/accueil/image_accueil_moyen.jpg);
+    }
+}
+
+
+/* Écran grand */
+
+@media(min-width: 1200px) {
+    /* grande imgage */
+    .grand-image-container {
+        background-image: url(../img/accueil/image_accueil_grand.jpg);
+    }
+}

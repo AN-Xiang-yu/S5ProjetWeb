@@ -71,11 +71,11 @@ header {
 
 header>nav>ul>li>a {
     color: white;
+    transition: all 0.5s linear;
 }
 
 header>nav>ul>li>a:hover {
     color: black;
-    transition: all 0.5s linear;
 }
 
 .page-actuel {
@@ -98,6 +98,22 @@ header>nav>ul>li>a:hover {
     border-bottom: 3px solid black;
 }
 
+#barre-menu-page-container-grand-ecran {
+    display: none;
+}
+
+.barre-menu-image-container {
+    width: 100%;
+}
+
+.barre-menu-image-navphone-container {
+    display: block;
+}
+
+.barre-menu-image {
+    height: 45px;
+}
+
 
 /* main */
 
@@ -114,6 +130,13 @@ article {
 section {
     margin: 1rem;
     padding: 2rem;
+}
+
+
+/* les icones autour de h2 */
+
+.icone-titre {
+    display: none;
 }
 
 
@@ -181,25 +204,6 @@ table {
 
 .cr-pointer {
     cursor: pointer;
-}
-
-
-/* display */
-
-.cache {
-    display: none;
-}
-
-.inline {
-    display: inline;
-}
-
-.inline-block {
-    display: inline-block;
-}
-
-.block {
-    display: block;
 }
 
 
@@ -370,6 +374,25 @@ button:hover::before {
 }
 
 
+/* display */
+
+.cache {
+    display: none;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+
 /* position */
 
 .ab-right {
@@ -398,10 +421,6 @@ button:hover::before {
 
 .hight100 {
     height: 100px;
-}
-
-.hight75 {
-    height: 75px;
 }
 
 .h100 {
@@ -564,7 +583,7 @@ button:hover::before {
 
 /*vignette*/
 
-.container-vignette>.vignette {
+.vignette {
     flex: 0 0 100%;
 }
 
@@ -586,16 +605,56 @@ button:hover::before {
 }
 
 
+/* contact */
+
+.contact-container {
+    width: 300px;
+}
+
+
+/* réseaux sociaux */
+
+.reseau-social-container {
+    background: linear-gradient(to right, var(--beige), white);
+    animation: changerBackgroundReseauSocial 6s linear infinite;
+}
+
+@keyframes changerBackgroundReseauSocial {
+    from {
+        filter: hue-rotate(360deg);
+    }
+    to {
+        filter: hue-rotate(0deg);
+    }
+}
+
+.reseau-social-logo-container {
+    width: 200px;
+}
+
+.reseau-social-logo-a {
+    transition: all 0.3s linear;
+}
+
+.reseau-social-logo-a:hover {
+    opacity: 0.5;
+}
+
+
 /* Écran très petit */
 
-@media(min-width: 576px) {}
+@media(min-width: 576px) {
+    .icone-titre {
+        display: none;
+    }
+}
 
 
 /* Écran petit */
 
 @media(min-width: 768px) {
     /* vignette */
-    .container-vignette>.vignette {
+    .vignette {
         flex: 0 0 45%;
         margin-left: calc(2.5% - 9px);
         margin-right: calc(2.5% - 9px);
@@ -607,7 +666,7 @@ button:hover::before {
 
 @media(min-width: 992px) {
     /* vignette */
-    .container-vignette>.vignette {
+    .vignette {
         flex: 0 0 30%;
         margin-left: calc(5%/3 - 9px);
         margin-right: calc(5%/3 - 9px);
@@ -621,6 +680,19 @@ button:hover::before {
      :root {
         --espace-header: 5rem;
     }
+    /* navigateur */
+    #barre-menu-page-container-grand-ecran {
+        display: flex;
+    }
+    .barre-menu-image-container {
+        width: 10%;
+    }
+    .barre-menu-image-navphone-container {
+        display: none;
+    }
+    .barre-menu-image {
+        height: 75px;
+    }
     .ordi-affiche {
         display: inline-block;
     }
@@ -629,9 +701,16 @@ button:hover::before {
         height: var(--espace-header);
     }
     /* vignette */
-    .container-vignette>.vignette {
+    .vignette {
         flex: 0 0 22.5%;
         margin-left: calc(1.25% - 9px);
         margin-right: calc(1.25% - 9px);
+    }
+    /* reseaux sociaux */
+    .contact-container {
+        width: 425px;
+    }
+    #barre-menu-page-container {
+        display: none;
     }
 }

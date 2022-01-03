@@ -1,3 +1,56 @@
 .container-titre-page {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../img/a_propos/a_propos.jpg);
 }
+
+
+/* membre projet */
+
+.membre-projet {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), var(--beige));
+}
+
+
+/* bureau */
+
+.bureau-membre {
+    flex: 0 0 100%;
+}
+
+
+/* Écran très petit */
+
+@media(min-width: 576px) {
+    /* bureau */
+    .bureau-membre {
+        flex: 0 0 45%;
+    }
+}
+
+
+/* Écran petit */
+
+@media(min-width: 768px) {}
+
+
+/* Écran moyen */
+
+@media(min-width: 992px) {
+    /* membre projet */
+    .membre-projet {
+        flex: 0 0 40%;
+    }
+    /* bureau */
+    .bureau-membre {
+        flex: 0 0 30%;
+    }
+}
+
+
+/* Écran grand */
+
+@media(min-width: 1200px) {
+    /* membre projet */
+    .membre-projet {
+        flex: 0 0 30%;
+    }
+}

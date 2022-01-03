@@ -1,7 +1,7 @@
-var tailleEcranOrdinateur = 1200;
-var tailleEcranSmartphone = 768;
+var tailleGrandEcran = 1200
+
 afficherDate()
-window.addEventListener("resize", changerNav)
+
 
 //création une balise pour 
 class MonHeader extends HTMLElement {
@@ -9,37 +9,60 @@ class MonHeader extends HTMLElement {
         this.innerHTML = `
          <header class="w100 backgroud-orange-saumon">
             <nav>
-                <ul id="barre-menu" class="flex direction-column a-center jc-start flex-70 ">
-                    <li class="flex-10">
-                        <div class="flex jc-center">
-                            <a class="ajouter_chemin" href="accueil.html">
-                                <!-- logo sur ordinateur -->
-                                <img class="hight75 ajouter_chemin_image mt-025r" src="../img/logo-phone.png" alt="logo d'ordinateur">
-                                <!-- logo sur tablette/phone -->
-                                <!-- <img src="../img/logo.png" alt=""> -->
-                            </a>
-                        </div>
-                    </li>
-                    <li id="accueil" class="flex-10 center">
-                        <a class="ajouter_chemin" href="accueil.html">Accueil</a></li>
-                    <li id="contact" class="flex-10 center">
-                        <a class="ajouter_chemin" href="contact.html">Contact</a></li>
-                    <li id="activite" class="flex-10 center">
-                        <a class="ajouter_chemin" href="../page/activite/activite.html">Activité</a>
-                    </li>
-                    </li>
-                    <li id="produit" class="flex-10 center">
-                        <a class="ajouter_chemin" href="produit.html">Produit</a>
-                    </li>
-                    <li id="a_propos" class="flex-10 center">
-                        <a class="ajouter_chemin" href="a_propos.html">À propos</a>
-                    </li>
-                    <li id="nous_rejoindre" class="flex-10 center">
-                        <a class="ajouter_chemin" href="nous_rejoindre.html">Nous rejoindre</a>
-                    </li>
-                    
+                <ul class="flex a-center w90 m-auto">
+                    <div class="flex jc-between a-center barre-menu-image-container">
+                        <li class="flex-10">
+                            <div class="flex jc-center">
+                                <a class="ajouter_chemin" href="accueil.html">
+                                    <img class="barre-menu-image ajouter_chemin_image mt-025r" src="../img/logo.png" alt="logo d'ordinateur">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex-10 barre-menu-image-navphone-container">
+                            <div class="flex jc-center">
+                                <img id="barre-menu-image-nav" class="barre-menu-image ajouter_chemin_image mt-025r cr-pointer" src="../img/nav_phone.png" alt="nav phone" onclick="changerNav()">
+                            </div>
+                        </li>
+                    </div>
+                    <div id="barre-menu-page-container-grand-ecran" class="flex-90 flex">
+                        <li id="accueil" class="flex-10 center">
+                            <a class="ajouter_chemin" href="accueil.html">Accueil</a></li>
+                        <li id="contact" class="flex-10 center">
+                            <a class="ajouter_chemin" href="contact.html">Contact</a></li>
+                        <li id="activite" class="flex-10 center">
+                            <a class="ajouter_chemin" href="../page/activite/activite.html">Activité</a>
+                        </li>
+                        </li>
+                        <li id="produit" class="flex-10 center">
+                            <a class="ajouter_chemin" href="produit.html">Produit</a>
+                        </li>
+                        <li id="a_propos" class="flex-10 center">
+                            <a class="ajouter_chemin" href="a_propos.html">À propos</a>
+                        </li>
+                        <li id="nous_rejoindre" class="flex-10 center">
+                            <a class="ajouter_chemin" href="nous_rejoindre.html">Nous rejoindre</a>
+                        </li>
+                    </div>
+                    <div id="barre-menu-page-container" class="flex-90 m-auto flex direction-column cache">
+                        <li id="accueil" class="flex-10 center">
+                            <a class="ajouter_chemin" href="accueil.html">Accueil</a></li>
+                        <li id="contact" class="flex-10 center">
+                            <a class="ajouter_chemin" href="contact.html">Contact</a></li>
+                        <li id="activite" class="flex-10 center">
+                            <a class="ajouter_chemin" href="../page/activite/activite.html">Activité</a>
+                        </li>
+                        </li>
+                        <li id="produit" class="flex-10 center">
+                            <a class="ajouter_chemin" href="produit.html">Produit</a>
+                        </li>
+                        <li id="a_propos" class="flex-10 center">
+                            <a class="ajouter_chemin" href="a_propos.html">À propos</a>
+                        </li>
+                        <li id="nous_rejoindre" class="flex-10 center">
+                            <a class="ajouter_chemin" href="nous_rejoindre.html">Nous rejoindre</a>
+                        </li>
+                    </div>
                 </ul>
-                <div id="barre-nav"></div>
             </nav>
         </header>
         `
@@ -52,14 +75,18 @@ class MonFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <footer class="backgroud-orange-saumon w100">
-            <p class="center flex-100">Copyright©2013-2021 BEM - All Rights Reserved.</p>
-            <p class="center flex-100 flex jc-between">
-                <span class="flex-30"><a class="ajouter_chemin lien-dehors-a" href="a_propos.html">À propos</a></span>
-                <span class="flex-30">zenefrei.fr</span>
-                <span class="flex-30">
+            <div class="center flex-100">
+                <p class="center">Copyright©2013-2021 BEM - All Rights Reserved.</p> 
+            </div>
+            <div class="center flex-100 flex jc-between">
+                <p class="flex-30">
+                    <a class="ajouter_chemin lien-dehors-a" href="a_propos.html">À propos</a>
+                </p>
+                <p class="flex-30">zenefrei.fr </p>
+                <p class="flex-30">
                     <span id="dateheure" class="ordi-affiche"></span>
-                </span>
-            </p>
+                </p>
+            </div>   
         </footer>
         `
     }
@@ -87,7 +114,6 @@ function ajouterChemin() {
 
     switch (nomPage) {
         case "activite":
-        case "activite-evenement":
             var aChange = document.getElementsByClassName("ajouter_chemin")
             var imgChange = document.getElementsByClassName("ajouter_chemin_image")
 
@@ -108,17 +134,14 @@ function ajouterChemin() {
 
 //modifier la façon d'afficher le barre de navigation
 function changerNav() {
-    var largueurEcran = window.innerWidth;
-    var barreMenu = document.getElementById('barre-menu')
-    var barreNavClass = barreMenu.getAttribute("class")
-    var nav = document.querySelector("nav")
+    var barreMenuPageContainer = document.getElementById('barre-menu-page-container')
+    var barreMenuPageContainerClass = barreMenuPageContainer.getAttribute("class")
 
-    if (largueurEcran > tailleEcranOrdinateur) {
-        let classModifie = barreNavClass.replace('direction-column', '')
-        barreMenu.setAttribute("class", classModifie)
+    if (barreMenuPageContainer.classList.contains('cache')) {
+        let classModifie = barreMenuPageContainerClass.replace('cache', '')
+        barreMenuPageContainer.setAttribute("class", classModifie)
     } else {
-        barreMenu.classList.add("direction-column")
-        nav.classList.add("flex", "jc-around", "a-center")
+        barreMenuPageContainer.classList.add("cache")
     }
 }
 
@@ -158,7 +181,7 @@ function zoomerImage() {
 
 function mettreImgDansCouche() {
     $(".img-couche").click(function() {
-        var _this = $(this); //将当前的pimg元素作为_this传入函数 
+        var _this = $(this);
         afficherImage(_this);
     });
 }
@@ -181,10 +204,10 @@ function afficherImage(_this) {
 
         largeurImg = scale * largeurPage
         hauteurImg = largeurImg / vraieLargeur * vraieHauteur
-        coucheImg.height = hauteurImg; //以最终的宽度对图片缩放 
+        coucheImg.height = hauteurImg;
 
-        var largeur = (largeurPage - largeurImg) / 2; //计算图片与窗口左边距 
-        var hauteur = (hauteurPage - hauteurImg) / 2; //计算图片与窗口上边距 
+        var largeur = (largeurPage - largeurImg) / 2;
+        var hauteur = (hauteurPage - hauteurImg) / 2;
 
         coucheImg.style.cssText = "top:" + (hauteur) + "px; right:" + (largeur) + "px; ";
 
